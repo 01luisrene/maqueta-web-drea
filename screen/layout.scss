@@ -1,0 +1,53 @@
+.contenido_principal{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.titulos-main{
+	margin-top: 0;
+}
+//===============DOCUMENTOS DE INTERES=====================
+.documentos-interes{
+	@extend %flex-wrap;
+	justify-content: space-between;
+	margin-bottom: 1em;
+	.titulos-main{
+		width: 100%;
+	}
+	a{
+		@extend %flex-wrap;
+		align-items: center;
+		@extend %transition;
+		color: #999999;
+		font-size: 1.2em;
+		text-decoration: none;
+		font-weight: 700;
+		&:hover{
+			color: darken(#999999, 10%);
+		}
+		.fa{
+			background-color: #999999;
+			border-radius: 100%;
+			color: $color-blanco;
+			font-size: 1.3em;
+			margin-right: 10px;
+			position: relative;
+			height: 60px;
+			width: 60px;
+			&::before{
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+		}
+	}
+}
+
+//==================== SERVICIOS =============
+.box-servicios{
+	@extend %flex-wrap;
+	justify-content: space-between;
+	div{
+		padding: 0.5em;
+		width: 31%;
+	}
+}

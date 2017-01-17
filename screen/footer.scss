@@ -1,0 +1,70 @@
+.footer{
+	background-color: #673421;
+	@extend %flex-wrap;
+	justify-content: space-between;
+	padding-top: 1.5em;
+	section{
+		color: $color-blanco;
+		padding: 0.5em;
+		width: 31%;
+		 p{
+			margin: 0;
+			line-height: 25px;
+		}
+		.footer-titulo{
+			margin-top: 0;
+		}
+		.redes-sociales{
+			@extend %transition;
+			margin-right: 15px;
+			&:nth-child(3){
+				margin-right:0;
+			}
+			&:hover{
+				color: #FA3E92;
+			}
+		}
+		a{
+			color: $color-blanco;
+			& .fa{
+				font-size: 2em;
+			}
+		}
+		.libro{
+			display: inline-block;
+			text-decoration: none;
+			border-bottom: thin dotted $color-blanco;
+			line-height: 1.2;
+			font-size: 1.2em;
+			margin-top: 1em;
+		}
+		.eslogan{
+			@extend %flex-nowrap;
+			margin: 2em 0;
+			p{
+				font-size: 1.3em;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-left: 0.5em;
+				padding-top: 0.5em;
+				&.copy{
+					text-align: right;
+				}
+			}
+		}
+	}
+	.dev{
+		background-color: #333333;
+		margin-left: -0.5em;
+		margin-right: -0.5em;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		width: 100%;
+		p{
+			color: $color-blanco;
+			text-align: right;
+			margin: 0;
+			padding: 0 0.5em;
+		}
+	}
+}

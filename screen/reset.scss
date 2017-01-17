@@ -1,0 +1,31 @@
+body{
+	background-color: #E3E3E3;
+	font-family: $font-family-contenido;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $font-family-titulos;
+}
+blockquote{
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	p{
+		font-size: 1.3em;
+	}
+	&::before{
+		content: "\f10d";
+		font-family: "FontAwesome";
+		position: absolute;
+		left: 5px;
+		top: 0;
+	}
+	&::after{
+		content: "\f10e";
+		font-family: "FontAwesome";
+		position: absolute;
+		right: 5px;
+		bottom: 0;
+	}
+}
