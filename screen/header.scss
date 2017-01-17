@@ -5,15 +5,38 @@
 	@extend %flex-wrap;
 	padding-top: 1em;
 	padding-bottom: 1em;
+	@include media-query($content-pc){
+		background-color: $bg-menu;
+		height: 47px;
+		margin-bottom: 1em;
+		padding: 0.5em;
+	}
 }
 //===================CAJA IMÁGENES=======================
 .box-imagenes{
 	height: 110px;
 	.escudo{
 		margin-right: 10px;
+		@include media-query($content-pc){
+			display: none;
+		}
 	}
 	img, a{
 		max-height: 110px;
+		@include media-query($content-pc){
+			max-height: 47px;
+		}
+	}
+}
+.logo-desktop{
+	@include media-query($content-pc){
+		display: none;
+	}
+}
+.logo-mobile{
+	display: none;
+	@include media-query($content-pc){
+		display: block;
 	}
 }
 //===================MENUS WEB=======================
@@ -21,6 +44,10 @@
 	@extend %flex-wrap;
 	justify-content: flex-end;
 	@extend %lista;
+	@include media-query($content-pc){
+	  //1000px
+	  display: none;
+	}
 	margin-bottom: 0;
 	.menu-item{
 		display: block;
@@ -69,10 +96,89 @@
 		}
 	}
 }
+//===================MENU MOBILE=======================
+.box-iconos, .box-menu-mobile{
+	display: none;
+}
+.box-iconos{
+	font-size: 1.8em;
+	a{
+		color: $color-blanco;
+		&:last-child{
+			margin-left: 15px;
+		}
+	}
+	@include media-query($content-pc){
+	  //1000px
+	  display: block;
+	  text-align: right;
+	}
+}
+.box-menu-mobile{
+	background-color: $bg-menu;
+	padding: 0.5em;
+	position: fixed;
+	top:0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	z-index: 9999999;
+	i{
+		color: $color-blanco;
+		font-size: 2em;
+		position: absolute;
+		right: 15px;
+	}
+	.logo-mobile{
+		img{
+			display: block;
+			margin: 1em auto;
+			max-height: 100px;
+		}
+	}
+}
+.menu-mobile{
+	@extend %lista;
+	margin-bottom: 0;
+	li{
+		background-color: #E4E1E4;
+		border-radius: 3px;
+		margin-bottom: 0.5em;
+		&:nth-child(1){
+			border-left: 6px solid #99CC33;
+			border-top: thin solid #99CC33;
+			border-bottom: thin solid #99CC33;
+			border-right: thin solid #99CC33;
+		}
+		&:nth-child(2){
+			border-left: 6px solid #99CCCC;
+			border-top: thin solid #99CCCC;
+			border-bottom: thin solid #99CCCC;
+			border-right: thin solid #99CCCC;
+		}
+		&:nth-child(3){
+			border-left: 6px solid #FF6633;
+			border-top: thin solid #FF6633;
+			border-bottom: thin solid #FF6633;
+			border-right: thin solid #FF6633;
+		}
+		a{
+			color: $color-negro;
+			margin-left: 10px;
+			font-weight: 700;
+			font-size: 1.3em;
+		}
+	}
+}
+//===================MENU SECUNDARIO=======================
 .menu-secundario{
 	@extend %flex-wrap;
 	justify-content: flex-end;
 	@extend %lista;
+	@include media-query($content){
+	  //1300px
+	  display: none;
+	}
 	li{
 		margin-right: 15px;
 		&:nth-child(4){
@@ -160,7 +266,7 @@
 	.icono-buscador{
 		color: $color-gris;
 		position: absolute;
-		top: 13px;
+		top: 9px;
 		right: 10px;
 	}
 	input[type="text"]{
@@ -179,9 +285,10 @@
 .box-imagenes, .box-menus{
 	width: 50%;
 }
+//=========================SLIDER MAIN========================
 .slider_principal{
 	background-color: $color-azul;
-	margin-bottom: 1em;
+	margin-bottom: 1em !important;
 	width: 100%;
 }
 
@@ -199,5 +306,21 @@
 	.director-descripcion{
 		text-align: center;
 		width: 70%;
+	}
+	.nombre-director{
+		small{
+			display: block;
+		}
+	}
+	.btn-home{
+		@extend %transition;
+		background-color: #60C300;
+		border-radius: 3px;
+		color: $color-blanco;
+		padding: 0.3em 1em;
+		text-decoration: none;
+		&:hover{
+			background-color: darken(#60C300, 5%);
+		}
 	}
 }

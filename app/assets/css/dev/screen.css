@@ -305,6 +305,7 @@ blockquote p {
 
 blockquote::before {
   content: "\f10d";
+  color: #6AABEE;
   font-family: "FontAwesome";
   position: absolute;
   left: 5px;
@@ -313,6 +314,7 @@ blockquote::before {
 
 blockquote::after {
   content: "\f10e";
+  color: #6AABEE;
   font-family: "FontAwesome";
   position: absolute;
   right: 5px;
@@ -330,6 +332,7 @@ blockquote::after {
 }
 
 .menu-principal,
+.menu-mobile,
 .menu-secundario {
   list-style-type: none;
   padding-left: 0;
@@ -337,6 +340,7 @@ blockquote::after {
 }
 
 .menu-principal li a,
+.menu-mobile li a,
 .menu-secundario li a {
   text-decoration: none;
 }
@@ -344,7 +348,10 @@ blockquote::after {
 .menu-principal .menu-item,
 .menu-secundario .icono,
 .buscador input[type="text"],
+.director-drea .btn-home,
 .documentos-interes a,
+.servicios a,
+.convocatorias .lista-convocatorias a,
 .footer section .redes-sociales {
   transition: 0.500s;
 }
@@ -364,6 +371,12 @@ blockquote::after {
   width: 0;
 }
 
+.documentos-interes,
+.box-servicios {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .nav-principal,
 .menu-principal,
 .menu-secundario,
@@ -373,7 +386,9 @@ blockquote::after {
 .director-drea,
 .documentos-interes,
 .documentos-interes a,
+.box-eventos,
 .box-servicios,
+.convocatorias .lista-convocatorias,
 .footer {
   display: -ms-flexbox;
   display: flex;
@@ -382,6 +397,8 @@ blockquote::after {
 }
 
 .buscador,
+.servicios a,
+.convocatorias .lista-convocatorias a,
 .footer section .eslogan {
   display: -ms-flexbox;
   display: flex;
@@ -409,6 +426,10 @@ blockquote::after {
 .box-imagenes img,
 .box-imagenes a {
   max-height: 110px;
+}
+
+.logo-mobile {
+  display: none;
 }
 
 .menu-principal {
@@ -469,6 +490,85 @@ blockquote::after {
 .menu-principal .menu-item a {
   display: block;
   padding: 0.5em 0.9em;
+}
+
+.box-iconos,
+.box-menu-mobile {
+  display: none;
+}
+
+.box-iconos {
+  font-size: 1.8em;
+}
+
+.box-iconos a {
+  color: #fff;
+}
+
+.box-iconos a:last-child {
+  margin-left: 15px;
+}
+
+.box-menu-mobile {
+  background-color: #673421;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  z-index: 9999999;
+}
+
+.box-menu-mobile i {
+  color: #fff;
+  font-size: 2em;
+  position: absolute;
+  right: 15px;
+}
+
+.box-menu-mobile .logo-mobile img {
+  display: block;
+  margin: 1em auto;
+  max-height: 100px;
+}
+
+.menu-mobile {
+  margin-bottom: 0;
+}
+
+.menu-mobile li {
+  background-color: #E4E1E4;
+  border-radius: 3px;
+  margin-bottom: 0.5em;
+}
+
+.menu-mobile li:nth-child(1) {
+  border-left: 6px solid #99CC33;
+  border-top: thin solid #99CC33;
+  border-bottom: thin solid #99CC33;
+  border-right: thin solid #99CC33;
+}
+
+.menu-mobile li:nth-child(2) {
+  border-left: 6px solid #99CCCC;
+  border-top: thin solid #99CCCC;
+  border-bottom: thin solid #99CCCC;
+  border-right: thin solid #99CCCC;
+}
+
+.menu-mobile li:nth-child(3) {
+  border-left: 6px solid #FF6633;
+  border-top: thin solid #FF6633;
+  border-bottom: thin solid #FF6633;
+  border-right: thin solid #FF6633;
+}
+
+.menu-mobile li a {
+  color: #3D3939;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.3em;
 }
 
 .menu-secundario {
@@ -584,7 +684,7 @@ blockquote::after {
 .buscador .icono-buscador {
   color: #BEBBBB;
   position: absolute;
-  top: 13px;
+  top: 9px;
   right: 10px;
 }
 
@@ -608,7 +708,7 @@ blockquote::after {
 
 .slider_principal {
   background-color: #6AABEE;
-  margin-bottom: 1em;
+  margin-bottom: 1em !important;
   width: 100%;
 }
 
@@ -631,6 +731,22 @@ blockquote::after {
   width: 70%;
 }
 
+.director-drea .nombre-director small {
+  display: block;
+}
+
+.director-drea .btn-home {
+  background-color: #60C300;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0.3em 1em;
+  text-decoration: none;
+}
+
+.director-drea .btn-home:hover {
+  background-color: #53aa00;
+}
+
 .contenido_principal {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -638,16 +754,13 @@ blockquote::after {
 
 .titulos-main {
   margin-top: 0;
+  width: 100%;
 }
 
 .documentos-interes {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 1em;
-}
-
-.documentos-interes .titulos-main {
-  width: 100%;
 }
 
 .documentos-interes a {
@@ -680,6 +793,23 @@ blockquote::after {
   left: 20px;
 }
 
+.box-eventos {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.box-eventos > div {
+  padding: 0.5em 1%;
+}
+
+.box-eventos .box-slider {
+  width: 66%;
+}
+
+.box-eventos .box-slider2 {
+  width: 28%;
+}
+
 .box-servicios {
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -690,8 +820,74 @@ blockquote::after {
   width: 31%;
 }
 
+.servicios a {
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 2em;
+  color: #726E6E;
+}
+
+.servicios a:hover {
+  color: #4B4949;
+}
+
+.servicios a i {
+  font-size: 3.5em;
+  margin-right: 15px;
+  color: #999999;
+}
+
+.servicios a i:hover {
+  color: gray;
+}
+
+.servicios a h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.servicios a small {
+  display: block;
+  line-height: 1.2;
+}
+
+.convocatorias .lista-convocatorias {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.convocatorias .lista-convocatorias a {
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 1.5em;
+  width: 47%;
+  color: #726E6E;
+}
+
+.convocatorias .lista-convocatorias a:hover {
+  color: #4B4949;
+}
+
+.convocatorias .lista-convocatorias a i {
+  font-size: 3em;
+  margin-right: 15px;
+  color: #D53D37;
+}
+
+.convocatorias .lista-convocatorias a i:hover {
+  color: #b32b26;
+}
+
+.convocatorias .lista-convocatorias a span {
+  display: block;
+  line-height: 1;
+}
+
 .footer {
-  background-color: #673421;
+  background: radial-gradient(circle, #875745, #673421);
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 1.5em;
@@ -771,5 +967,52 @@ blockquote::after {
   text-align: right;
   margin: 0;
   padding: 0 0.5em;
+}
+
+@media screen and (max-width: 1300px) {
+  .menu-secundario {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .inner {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .nav-principal {
+    background-color: #673421;
+    height: 47px;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  .box-imagenes .escudo {
+    display: none;
+  }
+
+  .box-imagenes img,
+  .box-imagenes a {
+    max-height: 47px;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .menu-principal {
+    display: none;
+  }
+
+  .box-iconos {
+    display: block;
+    text-align: right;
+  }
 }
 /*# sourceMappingURL=screen.css.map */

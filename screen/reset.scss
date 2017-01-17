@@ -16,6 +16,7 @@ blockquote{
 	}
 	&::before{
 		content: "\f10d";
+		color: $color-azul;
 		font-family: "FontAwesome";
 		position: absolute;
 		left: 5px;
@@ -23,6 +24,7 @@ blockquote{
 	}
 	&::after{
 		content: "\f10e";
+		color: $color-azul;
 		font-family: "FontAwesome";
 		position: absolute;
 		right: 5px;

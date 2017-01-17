@@ -10,52 +10,43 @@ $( document ).ready(function() {
   		$('.js_icono_buscador').removeAttr('style');
     });
 
-    $(".owl-carousel").owlCarousel({
-    	loop:true,
-	    margin:10,
-	    responsiveClass:true,
-	    autoplay: true,
-	    smartSpeed: 800,
-	    autoplayHoverPause:true,
-	    navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-	    dots: true,
-        nav: true,
-	    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:2,
-            nav:true
-        },
-        1000:{
-            items:1,
-            nav:true,
-            loop:true
-        }
-      }
+    $('.js_block_menu').on('click', function(event) {
+        event.preventDefault();
+        $('.box-menu-mobile').css({
+            display: 'block'
+        });
     });
+    $('#cerrar-menu-mobile').on('click', function(event) {
+        event.preventDefault();
+        $('.box-menu-mobile').css({
+            display: 'none'
+        });
+    });
+    //=====================SLIDER MAIN==================
+    $( '#slider-principal' ).sliderPro({
+        width: 1200,
+        height: 500,
+        fade: true,
+        arrows: true,
+        buttons: false,
+        fullScreen: true,
+        shuffle: true,
+        smallSize: 500,
+        mediumSize: 1000,
+        largeSize: 3000,
+        thumbnailArrows: true,
+        autoplay: true
+    });
+    
     $(".slider-eventos-comunicados").owlCarousel({
         loop:true,
         margin:10,
-        responsiveClass:true,
         autoplay: true,
         smartSpeed: 800,
         autoplayHoverPause:true,
         navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-        dots: false,
-        responsive:{
-           0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:5
-            }
-      }
+        items:3,
+        nav: true
     });
     $(".slider-enlaces-interes").owlCarousel({
         loop:true,
@@ -64,7 +55,20 @@ $( document ).ready(function() {
         smartSpeed: 800,
         autoplayHoverPause:true,
         navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-        items:8,
-        nav: true
+        nav: true,
+        responsive:{
+           0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:true
+            },
+            1000:{
+                items:5,
+                nav:true
+            }
+      }
     });
 });

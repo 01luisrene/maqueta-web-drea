@@ -4,15 +4,14 @@
 }
 .titulos-main{
 	margin-top: 0;
+	width: 100%;
 }
 //===============DOCUMENTOS DE INTERES=====================
 .documentos-interes{
+	@extend %padding-box;
 	@extend %flex-wrap;
 	justify-content: space-between;
 	margin-bottom: 1em;
-	.titulos-main{
-		width: 100%;
-	}
 	a{
 		@extend %flex-wrap;
 		align-items: center;
@@ -41,13 +40,93 @@
 		}
 	}
 }
-
-//==================== SERVICIOS =============
+//===============BOX EVENTOS COMUNICACIONES==================
+.box-eventos{
+		@extend %flex-wrap;
+		justify-content: space-between;
+		>div{
+			padding: 0.5em 1%;
+		}
+		.box-slider{
+			width: 66%;
+		}
+		.slider-eventos-comunicados{
+			
+		}
+		.box-slider2{
+			width: 28%;
+		}
+}
+//==================== BOX SERVICIOS =============
 .box-servicios{
+	@extend %padding-box;
 	@extend %flex-wrap;
 	justify-content: space-between;
 	div{
 		padding: 0.5em;
 		width: 31%;
 	}
+}
+//==================== SERVICIOS =============
+.servicios{
+	a{
+		@extend %flex-nowrap;
+		align-items: center;
+		text-decoration: none;
+		@extend %transition;
+		margin-bottom: 2em;
+		color: #726E6E;
+		&:hover{
+			color: #4B4949;
+		}
+		i{
+			font-size: 3.5em;
+			margin-right: 15px;
+			color: #999999;
+			&:hover{
+				color: darken(#999999, 10%);
+			}
+		}
+		h3{
+			margin-top: 0;
+			margin-bottom: 0.5em;
+		}
+		small{
+			display: block;
+			line-height:1.2;
+		}
+	}
+}
+//======================CONVOCATORIAS=====================
+.convocatorias{
+	.lista-convocatorias{
+		@extend %flex-wrap;
+		justify-content: space-between;
+		width: 100%;
+		a{
+			@extend %flex-nowrap;
+			align-items: center;
+			text-decoration: none;
+			@extend %transition;
+			margin-bottom: 1.5em;
+			width: 47%;
+			color: #726E6E;
+			&:hover{
+				color: #4B4949;
+			}
+			i{
+				font-size: 3em;
+				margin-right: 15px;
+				color: #D53D37;
+				&:hover{
+					color: darken(#D53D37, 10%);
+				}
+			}
+			span{
+				display: block;
+				line-height: 1;
+			}
+		}
+	}
+	
 }

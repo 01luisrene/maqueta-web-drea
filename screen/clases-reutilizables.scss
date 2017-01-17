@@ -6,4 +6,9 @@
 	padding-right: 0.5em;
 	width: 85%;
 	max-width: 1200px;
+	@include media-query($content-pc){
+		width: 96%;
+		padding-left: 2%;
+		padding-right: 2%;
+	}
 }

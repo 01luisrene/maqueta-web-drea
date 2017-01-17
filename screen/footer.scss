@@ -1,5 +1,5 @@
 .footer{
-	background-color: #673421;
+	background: $bg-footer;
 	@extend %flex-wrap;
 	justify-content: space-between;
 	padding-top: 1.5em;
