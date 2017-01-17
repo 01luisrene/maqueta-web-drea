@@ -45,8 +45,22 @@ $( document ).ready(function() {
         smartSpeed: 800,
         autoplayHoverPause:true,
         navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-        items:3,
-        nav: true
+        nav: true,
+        dots: false,
+        responsive:{
+           0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:true
+            },
+            1000:{
+                items:3,
+                nav:true
+            }
+        }
     });
     $(".slider-enlaces-interes").owlCarousel({
         loop:true,
@@ -54,6 +68,7 @@ $( document ).ready(function() {
         autoplay: true,
         smartSpeed: 800,
         autoplayHoverPause:true,
+        dots: false,
         navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
         nav: true,
         responsive:{
