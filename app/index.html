@@ -66,22 +66,22 @@
 		<section class="slider-pro slider_principal" id="slider-principal">
 		<div class="sp-slides">
 			<div class="sp-slide">
-				<img src="/assets/images/slider_principal/bg1.jpg">
-				<p class="sp-layer sp-white sp-padding" data-position="bottomCenter" data-width="95%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, facere!</p>
+				<img class="sp-image" src="/assets/images/slider_principal/bg1.jpg">
+				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
 			</div>
 			<div class="sp-slide">
-				<img src="/assets/images/slider_principal/bg2.jpg">
-				<p class="sp-layer sp-white sp-padding" data-position="bottomCenter" data-width="95%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
+				<img class="sp-image" src="/assets/images/slider_principal/bg2.jpg">
+				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
 
 			</div>
 			<div class="sp-slide">
-				<img src="/assets/images/slider_principal/bg3.png">
-				<p class="sp-layer sp-white sp-padding" data-position="bottomCenter" data-width="95%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, aperiam.</p>
+				<img class="sp-image" src="/assets/images/slider_principal/bg3.png">
+				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, aperiam.</p>
 		
 			</div>
 			<div class="sp-slide">
-				<img src="/assets/images/slider_principal/bg4.jpg">
-				<p class="sp-layer sp-white sp-padding" data-position="bottomCenter" data-width="95%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aut.</p>
+				<img class="sp-image" src="/assets/images/slider_principal/bg4.jpg">
+				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aut.</p>
 			</div>
 		</div>
 		</section>
@@ -112,23 +112,36 @@
 		<section class="box-eventos">
 			<div class="box-slider">
 				<h2 class="titulos-main">Eventos y Comunicados</h2>
-				<div class="slider-eventos-comunicados owl-carousel owl-theme">
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt=""></a></div>
-				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt=""></a></div>
+				<div class="eventos-comunicados-carousel owl-carousel owl-theme">
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg03.png"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg03.png"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
+				<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
 			</div>
 			</div>
 			<div class="box-slider2">
-				<img src="/assets/images/slider_principal/bg4.jpg" height="300">
+				<div class="small-carousel owl-carousel owl-theme">
+					<div>
+						<img src="/assets/images/slider_small/small_bg_01.jpg">
+					</div>
+					<div>
+						<img src="/assets/images/slider_small/small_bg_02.jpg">
+					</div>
+					<div>
+						<img src="/assets/images/slider_small/small_bg_01.jpg">
+					</div>
+					<div>
+						<img src="/assets/images/slider_small/small_bg_02.jpg">
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="box-servicios">
-			<div class="servicios">
+			<div class="servicios contenedor">
 				<h2 class="titulos-main">Servicios</h2>
 				<a href="#">
 					<i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -145,7 +158,7 @@
 					</span>
 				</a>
 			</div>
-			<div class="convocatorias">
+			<div class="convocatorias contenedor">
 				<h2 class="titulos-main">Convocatorias</h2>
 					<div class="lista-convocatorias">
 						<a href="#">
@@ -179,14 +192,27 @@
 						</a>
 					</div>			
 			</div>
-			<div>
+			<div class="contenedor">
 				<h2 class="titulos-main">Videos</h2>
-				<iframe width="100%" height="250" src="https://www.youtube.com/embed/DkKmn5TlDCI" frameborder="0" allowfullscreen></iframe>
+				<div class="video-carousel owl-carousel owl-theme">
+          <div class="item-video" data-merge="3">
+            <a class="owl-video" href="https://vimeo.com/23924346"></a> 
+          </div>
+          <div class="item-video" data-merge="1">
+            <a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a> 
+          </div>
+          <div class="item-video" data-merge="2">
+            <a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a> 
+          </div>
+          <div class="item-video" data-merge="1">
+            <a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a> 
+          </div>
+	      </div>
 			</div>
 		</section>
 		<section class="enlaces-interes">
 			<h2>Enlaces de Interés</h2>
-			<div class="slider-enlaces-interes owl-carousel owl-theme">
+			<div class="enlaces-interes-carousel owl-carousel owl-theme">
 				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt=""></a></div>
 				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt=""></a></div>
 				<div><a href="#"><img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt=""></a></div>

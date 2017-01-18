@@ -371,8 +371,7 @@ blockquote::after {
   width: 0;
 }
 
-.documentos-interes,
-.box-servicios {
+.documentos-interes {
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -815,9 +814,13 @@ blockquote::after {
   justify-content: space-between;
 }
 
-.box-servicios div {
+.box-servicios > div {
   padding: 0.5em;
   width: 31%;
+}
+
+.box-servicios .video-carousel .item-video {
+  height: 200px;
 }
 
 .servicios a {

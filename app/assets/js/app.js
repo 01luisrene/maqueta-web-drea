@@ -26,19 +26,23 @@ $( document ).ready(function() {
     $( '#slider-principal' ).sliderPro({
         width: 1200,
         height: 500,
-        fade: true,
         arrows: true,
         buttons: false,
-        fullScreen: true,
-        shuffle: true,
-        smallSize: 500,
-        mediumSize: 1000,
-        largeSize: 3000,
-        thumbnailArrows: true,
-        autoplay: true
+        waitForLayers: true,
+        thumbnailWidth: 200,
+        thumbnailHeight: 100,
+        thumbnailPointer: true,
+        autoplay: false,
+        autoScaleLayers: false,
+        breakpoints: {
+            500: {
+                thumbnailWidth: 120,
+                thumbnailHeight: 50
+            }
+        }
     });
     
-    $(".slider-eventos-comunicados").owlCarousel({
+    $(".eventos-comunicados-carousel").owlCarousel({
         loop:true,
         margin:10,
         autoplay: true,
@@ -62,7 +66,7 @@ $( document ).ready(function() {
             }
         }
     });
-    $(".slider-enlaces-interes").owlCarousel({
+    $(".enlaces-interes-carousel").owlCarousel({
         loop:true,
         margin:10,
         autoplay: true,
@@ -85,5 +89,46 @@ $( document ).ready(function() {
                 nav:true
             }
       }
+    });
+    $('.small-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        autoplay: true,
+        smartSpeed: 800,
+        autoplayHoverPause:true,
+        dots: false,
+        navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+        nav: true,
+        responsive:{
+           0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:1,
+                nav:true
+            },
+            1000:{
+                items:1,
+                nav:true
+            }
+      }
+    });
+    $('.video-carousel').owlCarousel({
+        items:1,
+        merge:true,
+        loop:true,
+        margin:10,
+        video:true,
+        lazyLoad:true,
+        center:true,
+        responsive:{
+            480:{
+                items:1
+            },
+            600:{
+                items:1
+            }
+        }
     });
 });

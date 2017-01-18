@@ -50,22 +50,19 @@
 		.box-slider{
 			width: 66%;
 		}
-		.slider-eventos-comunicados{
-			
-		}
 		.box-slider2{
 			width: 28%;
 		}
 }
 //==================== BOX SERVICIOS =============
 .box-servicios{
-	@extend %padding-box;
 	@extend %flex-wrap;
 	justify-content: space-between;
-	div{
+	> div{
 		padding: 0.5em;
 		width: 31%;
 	}
+	.video-carousel .item-video{height:200px};
 }
 //==================== SERVICIOS =============
 .servicios{
