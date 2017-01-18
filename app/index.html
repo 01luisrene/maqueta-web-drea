@@ -16,11 +16,17 @@
 	<header class="inner header_principal">
 		<!-- Menú web principal -->
 		<nav class="nav-principal">
+		<!-- Contenedor escudo, logos -->
 		<div class="box-imagenes">
 			<img class="escudo" src="/assets/images/escudo_peru.png" alt="Escudo del Perú">
-			<a class="logo-desktop" href="/"><img src="/assets/images/logo.png" alt="Dirección Regional de Educación Amazonas"></a>
-			<a class="logo-mobile" href="/"><img src="/assets/images/logo_mobile.png" alt="Dirección Regional de Educación Amazonas"></a>
+			<a class="logo-desktop" href="/">
+				<img src="/assets/images/logo.png" alt="Dirección Regional de Educación Amazonas">
+			</a>
+			<a class="logo-mobile" href="/">
+				<img src="/assets/images/logo_mobile.png" alt="Dirección Regional de Educación Amazonas">
+			</a>
 		</div>
+		<!-- contenedor menús web -->
 		<div class="box-menus">
 			<!-- Menú secundario -->
 			<ul class="menu-secundario">
@@ -33,7 +39,7 @@
 				<li><a href="#"><i class="icono fa fa-envelope" aria-hidden="true"></i> <span>Correo</span></a></li>
 				<li><a href="#"><i class="icono fa fa-search" aria-hidden="true"></i> <span>Transparencia</span></a></li>
 
-				<!--Colocar una lupa en el before del buscador-->
+				<!--Buscador-->
 				<div class="buscador">
 					<label class="icono-buscador js_icono_buscador"><i class="fa fa-search" aria-hidden="true"></i></label>
 					<input class="js_buscador" type="text" placeholder="Busca noticias, trámites, servicios" />
@@ -45,14 +51,16 @@
 				<li class="menu-item"><a href="#">Unidades</a></li>
 				<li class="menu-item"><a href="#">Servicios</a></li>
 			</ul>
-			<!-- Menú móvil -->
+			
 			<div class="box-iconos">
 				<a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
 				<a class="icono-menu js_block_menu" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a>
 			</div>
-			<div class="box-menu-mobile">
+			<!-- Contenedor menú móvil -->
+			<div class="box-menu-mobile animated" id="js_menu_mobile" style="display:none;">
 				<i id="cerrar-menu-mobile" class="fa fa-times" aria-hidden="true"></i>
 				<a class="logo-mobile" href="/"><img src="/assets/images/logo_mobile.png" alt="Dirección Regional de Educación Amazonas"></a>
+				<!-- Menú móvil -->
 				<ul class="menu-mobile" id="menu_mobile">
 				<li class="menu-item"><a href="#">Institucional</a></li>
 				<li class="menu-item"><a href="#">Unidades</a></li>
@@ -63,41 +71,43 @@
 		</nav>
 		<!-- Fin menú web principal -->
 		
+		<!-- Slider principal -->
 		<section class="slider-pro slider_principal" id="slider-principal">
-		<div class="sp-slides">
-			<div class="sp-slide">
-				<img class="sp-image" src="/assets/images/slider_principal/bg1.jpg">
-				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
-			</div>
-			<div class="sp-slide">
-				<img class="sp-image" src="/assets/images/slider_principal/bg2.jpg">
-				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
+			<div class="sp-slides">
+				<div class="sp-slide">
+					<img class="sp-image" src="/assets/images/slider_principal/bg1.jpg">
+					<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
+				</div>
+				<div class="sp-slide">
+					<img class="sp-image" src="/assets/images/slider_principal/bg2.jpg">
+					<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</p>
 
+				</div>
+				<div class="sp-slide">
+					<img class="sp-image" src="/assets/images/slider_principal/bg3.png">
+					<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, aperiam.</p>
+			
+				</div>
+				<div class="sp-slide">
+					<img class="sp-image" src="/assets/images/slider_principal/bg4.jpg">
+					<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aut.</p>
+				</div>
 			</div>
-			<div class="sp-slide">
-				<img class="sp-image" src="/assets/images/slider_principal/bg3.png">
-				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, aperiam.</p>
-		
-			</div>
-			<div class="sp-slide">
-				<img class="sp-image" src="/assets/images/slider_principal/bg4.jpg">
-				<p class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aut.</p>
-			</div>
-		</div>
 		</section>
-
+		
+		<!-- Sección Director DREA -->
 		<section class="director-drea">
-		<div class="director-foto">
-			<img src="/assets/images/director.jpg" alt="Director de la Dirección Regional de Educación Amazonas">
-		</div>
-		<div class="director-descripcion">
-			<blockquote>
-				<p>Uno de los desafíos fundamentales para el futuro de nuestro país, es el desafío de la educación.  Es en el campo educativo donde se configura el futuro y el bienestar de nuestros actuales niños y niñas, así como de las próximas generaciones.</p>
-			</blockquote>
-			<h2 class="nombre-director">Edgar Moises Julca Chuquista <small>Director Regional</small></h2>
+			<div class="director-foto">
+				<img src="/assets/images/director.jpg" alt="Director de la Dirección Regional de Educación Amazonas">
+			</div>
+			<div class="director-descripcion">
+				<blockquote>
+					<p>Uno de los desafíos fundamentales para el futuro de nuestro país, es el desafío de la educación.  Es en el campo educativo donde se configura el futuro y el bienestar de nuestros actuales niños y niñas, así como de las próximas generaciones.</p>
+				</blockquote>
+				<h2 class="nombre-director">Edgar Moises Julca Chuquista <small>Director Regional</small></h2>
 
-			<a class="btn-home" href="#">Ver Agenda</a>
-		</div>
+				<a class="btn-home" href="#">Ver Agenda</a>
+			</div>
 		</section>
 	</header>
 	<main class="contenido_principal inner">
@@ -113,15 +123,15 @@
 			<div class="box-slider">
 				<h2 class="titulos-main">Eventos y Comunicados</h2>
 				<div class="eventos-comunicados-carousel owl-carousel owl-theme">
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg03.png"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg03.png"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
-				<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
-			</div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg03.png"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg03.png"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg01.jpg"></a></div>
+					<div><a href="#"><img src="/assets/images/ec_carousel/bg02.jpg"></a></div>
+				</div>
 			</div>
 			<div class="box-slider2">
 				<div class="small-carousel owl-carousel owl-theme">
@@ -192,7 +202,7 @@
 						</a>
 					</div>			
 			</div>
-			<div class="contenedor">
+			<div class="videos contenedor">
 				<h2 class="titulos-main">Videos</h2>
 				<div class="video-carousel owl-carousel owl-theme">
           <div class="item-video" data-merge="3">
@@ -225,7 +235,7 @@
 		</section>
 	</main>
 	<footer class="footer inner">
-		<section>
+		<section class="footer-col-1">
 			<h3 class="footer-titulo">Transparencia Web</h3>
 			<p>Lic. Juan Perez</p>
 			<p>Resp. del Acceso a la Información Pública.</p></samll>
@@ -237,7 +247,7 @@
 			<p>R.E.R. Nº 414-2015-GR-LL-PRE</p>
 			<p>cchunga@regionlalibertad.gob.pe</p>
 		</section>
-		<section>
+		<section class="footer-col-2">
 			<h3 class="footer-titulo">Contacto</h3>
 			<p>Dirección Regional de Educación Amazonas</p>
 	 		<p><i class="fa fa-map-marker" aria-hidden="true"></i> Jr. Junin N° 1143 - Chachapoyas - Amazonas</p>
@@ -245,7 +255,7 @@
 	 		<p><i class="fa fa-phone" aria-hidden="true"></i> 041-478275  Fax. 041-477009</p>
 	 		<p><i class="fa fa-clock-o" aria-hidden="true"></i> Atención al ciudadano: Lun - Vi 8:00 am a 4:30 pm</p>
 		</section>
-		<section>
+		<section class="footer-col-3">
 			<a class="redes-sociales" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			<a class="redes-sociales" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 			<a class="redes-sociales" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
@@ -257,7 +267,7 @@
 			</div>
 			<p class="copy">© 2017 Dirección Regional de Educación Amazonas</p>
 		</section>
-		<div class="dev"><p>Diseñado y desarrollado por: Wander Rojas</p></div>
+		<div class="dev"><p>Diseñado y desarrollado por: <a href="#" target="_blank">Wander Rojas</a></p></div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="/assets/js/owl.carousel.min.js"></script>

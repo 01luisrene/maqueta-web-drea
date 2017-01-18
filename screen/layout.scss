@@ -1,3 +1,4 @@
+//=====================================MAIN================
 .contenido_principal{
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -11,7 +12,10 @@
 	@extend %padding-box;
 	@extend %flex-wrap;
 	justify-content: space-between;
-	margin-bottom: 1em;
+	@include media-query($content){
+	//1300px
+		
+	}
 	a{
 		@extend %flex-wrap;
 		align-items: center;
@@ -20,6 +24,19 @@
 		font-size: 1.2em;
 		text-decoration: none;
 		font-weight: 700;
+		@include media-query($content){
+		//1300px
+			width: 33%;
+			margin-bottom: 1em;
+		}
+		@include media-query($content-pc){
+		  //1000px
+		  width: 50%;
+		}
+		@include media-query($on-tablet){
+		//700px
+			 width: 100%;
+		}
 		&:hover{
 			color: darken(#999999, 10%);
 		}
@@ -44,25 +61,62 @@
 .box-eventos{
 		@extend %flex-wrap;
 		justify-content: space-between;
+		@include media-query($content-pc){
+		  //1000px
+		  justify-content: center;
+		}
 		> div{
 			padding: 0.5em 1%;
 		}
 		.box-slider{
 			width: 66%;
+			@include media-query($content-pc){
+			  //1000px
+			  width: 98%
+			}
 		}
 		.box-slider2{
 			width: 28%;
+			@include media-query($content-pc){
+			  //1000px
+			  width: 60%
+			}
+			@include media-query($on-smartphone){
+			//480px
+				width: 100%;
+			}
 		}
 }
 //==================== BOX SERVICIOS =============
 .box-servicios{
 	@extend %flex-wrap;
 	justify-content: space-between;
-	> div{
+	.contenedor{
 		padding: 0.5em;
 		width: 31%;
 	}
-	.video-carousel .item-video{height:200px};
+	.servicios, .convocatorias{
+		@include media-query($content){
+			width: 48%;
+			@include media-query($on-laptop){
+			//900px
+				width: 98%;
+			}
+		}
+	}
+	.videos{
+		@include media-query($content){
+		  //1300px
+		  width: 98%;
+		}
+	}
+	.video-carousel .item-video{
+		height:200px;
+		@include media-query($content){
+		  //1300px
+		  height:350px;
+		}
+	}
 }
 //==================== SERVICIOS =============
 .servicios{

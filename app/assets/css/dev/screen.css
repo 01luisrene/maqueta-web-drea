@@ -414,8 +414,9 @@ blockquote::after {
   padding-bottom: 1em;
 }
 
-.box-imagenes {
-  height: 110px;
+.box-imagenes,
+.box-menus {
+  width: 50%;
 }
 
 .box-imagenes .escudo {
@@ -491,8 +492,7 @@ blockquote::after {
   padding: 0.5em 0.9em;
 }
 
-.box-iconos,
-.box-menu-mobile {
+.box-iconos {
   display: none;
 }
 
@@ -692,17 +692,12 @@ blockquote::after {
   border: thin solid #BEBBBB;
   height: 30px;
   padding: 5px 5% 5px 1%;
-  width: 480px;
+  width: 435px;
 }
 
 .buscador input[type="text"]:focus {
   border: thin solid #6AABEE;
   outline: none;
-}
-
-.box-imagenes,
-.box-menus {
-  width: 50%;
 }
 
 .slider_principal {
@@ -713,7 +708,7 @@ blockquote::after {
 
 .director-drea {
   background-color: #ECF0F1;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .director-drea .director-foto {
@@ -759,7 +754,6 @@ blockquote::after {
 .documentos-interes {
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 1em;
 }
 
 .documentos-interes a {
@@ -814,7 +808,7 @@ blockquote::after {
   justify-content: space-between;
 }
 
-.box-servicios > div {
+.box-servicios .contenedor {
   padding: 0.5em;
   width: 31%;
 }
@@ -962,7 +956,7 @@ blockquote::after {
   margin-right: -0.5em;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  width: 100%;
+  width: 104%;
 }
 
 .footer .dev p {
@@ -972,9 +966,48 @@ blockquote::after {
   padding: 0 0.5em;
 }
 
+.footer .dev p a {
+  color: #fff;
+}
+
 @media screen and (max-width: 1300px) {
+  .nav-principal {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+  }
+
+  .box-imagenes img,
+  .box-imagenes a {
+    max-height: 60px;
+  }
+
   .menu-secundario {
     display: none;
+  }
+
+  .documentos-interes a {
+    width: 33%;
+    margin-bottom: 1em;
+  }
+
+  .box-servicios .servicios,
+  .box-servicios .convocatorias {
+    width: 48%;
+  }
+
+  .box-servicios .videos {
+    width: 98%;
+  }
+
+  .box-servicios .video-carousel .item-video {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1300px) and (max-width: 900px) {
+  .box-servicios .servicios,
+  .box-servicios .convocatorias {
+    width: 98%;
   }
 }
 
@@ -988,8 +1021,6 @@ blockquote::after {
   .nav-principal {
     background-color: #673421;
     height: 47px;
-    margin-bottom: 1em;
-    padding: 0.5em;
   }
 
   .box-imagenes .escudo {
@@ -1016,6 +1047,86 @@ blockquote::after {
   .box-iconos {
     display: block;
     text-align: right;
+  }
+
+  .documentos-interes a {
+    width: 50%;
+  }
+
+  .box-eventos {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .box-eventos .box-slider {
+    width: 98%;
+  }
+
+  .box-eventos .box-slider2 {
+    width: 60%;
+  }
+
+  .footer .footer-col-1,
+  .footer .footer-col-2 {
+    width: 48%;
+  }
+
+  .footer .footer-col-3 {
+    border-top: thin dotted #fff;
+    margin-top: 1.5em;
+    padding-top: 1em;
+    width: 100%;
+  }
+
+  .footer .footer-col-3 hr {
+    background: transparent;
+    border: 0;
+  }
+
+  .footer .dev {
+    margin-left: -2%;
+    margin-right: -2%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer .footer-col-1 {
+    border-bottom: thin dotted #fff;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+    width: 100%;
+  }
+
+  .footer .footer-col-1,
+  .footer .footer-col-2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .director-drea .director-foto {
+    width: 100%;
+  }
+
+  .director-drea .director-foto img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .director-drea .director-descripcion {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .documentos-interes a {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box-eventos .box-slider2 {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=screen.css.map */

@@ -1,27 +1,48 @@
-$( document ).ready(function() {
+var $menu_mobile = $('#js_menu_mobile');
+var $drea_js = (function ($) {
+  //==========Buscador=====================
+  var buscador = function(){
     $('.js_buscador').on('focus',  function(event) {
-    	event.preventDefault();
-  		$('.js_icono_buscador').css({
-    		color: '#6AABEE'
-    	});
+      event.preventDefault();
+      $('.js_icono_buscador').css({
+        color: '#6AABEE'
+      });
     });
     $('.js_buscador').on('focusout',  function(event) {
-    	event.preventDefault();
-  		$('.js_icono_buscador').removeAttr('style');
+      event.preventDefault();
+      $('.js_icono_buscador').removeAttr('style');
     });
-
+  },
+  //==========Menú móvil=====================
+  menu_mobile = function(){
     $('.js_block_menu').on('click', function(event) {
         event.preventDefault();
-        $('.box-menu-mobile').css({
+        $menu_mobile.css({
             display: 'block'
         });
+        $menu_mobile.addClass('bounceInRight').removeClass('fadeOutRight');
     });
     $('#cerrar-menu-mobile').on('click', function(event) {
         event.preventDefault();
-        $('.box-menu-mobile').css({
+        $menu_mobile.css({
             display: 'none'
         });
+        $menu_mobile.removeAttr('style');
+        $menu_mobile.addClass('fadeOutRight').removeClass('bounceInRight');
+        setTimeout(function(){ $menu_mobile.css('display', 'none'); }, 500);
     });
+    //=======================Ocultar menu cuando es mayo 1000px==================
+    $(window).resize(function() {
+      var height = $(this).height();
+      if($(this).width() > height){
+        var width = $(this).width();
+        $menu_mobile.css({
+            display: 'none'
+        });
+      }
+    });
+  },
+  slider_main = function(){
     //=====================SLIDER MAIN==================
     $( '#slider-principal' ).sliderPro({
         width: 1200,
@@ -41,7 +62,8 @@ $( document ).ready(function() {
             }
         }
     });
-    
+  },
+  eventos_comunicados_carousel = function(){
     $(".eventos-comunicados-carousel").owlCarousel({
         loop:true,
         margin:10,
@@ -66,6 +88,8 @@ $( document ).ready(function() {
             }
         }
     });
+  },
+  enlaces_interes_carousel = function(){
     $(".enlaces-interes-carousel").owlCarousel({
         loop:true,
         margin:10,
@@ -90,6 +114,8 @@ $( document ).ready(function() {
             }
       }
     });
+  },
+  small_carousel = function(){
     $('.small-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -114,6 +140,8 @@ $( document ).ready(function() {
             }
       }
     });
+  },
+  video_carousel = function(){
     $('.video-carousel').owlCarousel({
         items:1,
         merge:true,
@@ -131,4 +159,23 @@ $( document ).ready(function() {
             }
         }
     });
-});
+  },
+  init = function () {
+    buscador();
+    menu_mobile();
+    slider_main();
+    eventos_comunicados_carousel();
+    enlaces_interes_carousel();
+    small_carousel();
+    video_carousel();
+  };
+
+  return {
+      init: init
+  };
+
+})(jQuery);
+
+(function () {
+    $drea_js.init();
+})();
