@@ -53,7 +53,7 @@ var $drea_js = (function ($) {
         thumbnailWidth: 200,
         thumbnailHeight: 100,
         thumbnailPointer: true,
-        autoplay: false,
+        autoplay: true,
         autoScaleLayers: false,
         breakpoints: {
             500: {
@@ -160,6 +160,22 @@ var $drea_js = (function ($) {
         }
     });
   },
+  botonUp = function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 300){
+        $("#js_up").slideDown(300);
+      }else{
+        $("#js_up").slideUp(300);
+      }
+    });
+    $("#js_up i").on('click', function (e) {
+      e.preventDefault();
+        $("body,html").animate({
+        scrollTop: 0
+      },700);
+      return false;
+    });
+  },
   init = function () {
     buscador();
     menu_mobile();
@@ -168,6 +184,7 @@ var $drea_js = (function ($) {
     enlaces_interes_carousel();
     small_carousel();
     video_carousel();
+    botonUp();
   };
 
   return {

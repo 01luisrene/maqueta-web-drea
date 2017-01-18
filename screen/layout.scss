@@ -5,7 +5,27 @@
 }
 .titulos-main{
 	margin-top: 0;
+	position: relative;
 	width: 100%;
+	&::before{
+		background-color: #66CC00;
+		content: "";
+		height: 5px;
+		width: 25%;
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		z-index: 100;
+	}
+	&::after{
+		background-color: #CCCCCC;
+		content: "";
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+	}
 }
 //===============DOCUMENTOS DE INTERES=====================
 .documentos-interes{
@@ -23,7 +43,6 @@
 		color: #999999;
 		font-size: 1.2em;
 		text-decoration: none;
-		font-weight: 700;
 		@include media-query($content){
 		//1300px
 			width: 33%;
@@ -55,6 +74,12 @@
 				left: 20px;
 			}
 		}
+	}
+}
+//===============EVENTOS Y COMUNICADOS==================
+.eventos-comunicados-carousel{
+	p{
+		margin: 0;
 	}
 }
 //===============BOX EVENTOS COMUNICACIONES==================

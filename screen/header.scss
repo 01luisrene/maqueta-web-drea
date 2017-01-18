@@ -58,11 +58,11 @@
 	@extend %flex-wrap;
 	justify-content: flex-end;
 	@extend %lista;
+	margin-bottom: 0;
 	@include media-query($content-pc){
 	  //1000px
 	  display: none;
 	}
-	margin-bottom: 0;
 	.menu-item{
 		display: block;
 		border-bottom: thin dotted;
@@ -107,7 +107,129 @@
 		a{
 			display: block;
 			padding: 0.5em 0.9em;
+			&:hover{
+				color: $color-blanco;
+			}
 		}
+		//=====SUB MENU======
+		.sub-menu-1{
+			background-color: #99CC33;
+			width: 200px;
+			left: -50px;
+			&::before{
+				content: "";
+				border-right:7px solid transparent;
+				border-bottom:7px solid #99CC33;
+				border-left:7px solid transparent;
+				border-top: 7px solid transparent;
+				margin-left: -7px;
+				position: absolute;
+				top: -14px;
+				left: 50%;
+			}
+		}
+		.sub-menu-2{
+			background-color: #99CCCC;
+			min-height: 150px;
+			padding: 1em;
+			width: 1085px;
+			left: -910px;
+			@include media-query($content){
+			  //1300px
+			  width: 1050px;
+				left: -850px;
+			}
+			@include media-query(1200px){
+				width: 900px;
+				left: -700px;
+			}
+			@include media-query(1100px){
+			  //1100px
+			  width: 900px;
+				left: -700px;
+			}
+			&::before{
+				content: "";
+				border-right:7px solid transparent;
+				border-bottom:7px solid #99CCCC;
+				border-left:7px solid transparent;
+				border-top: 7px solid transparent;
+				margin-left: -7px;
+				position: absolute;
+				top: -14px;
+				right: 12%;
+				@include media-query($content){
+			  //1300px
+				  right: 15%;
+				}
+				@include media-query(1200px){
+					 right: 17%;
+				}
+				@include media-query(1100px){
+				  //1100px
+				  right: 18%;
+				}
+			}
+		}
+		.sub-menu-3{
+			background-color: #FF6633;
+			width: 200px;
+			left: -50px;
+			&::before{
+				content: "";
+				border-right:7px solid transparent;
+				border-bottom:7px solid #FF6633;
+				border-left:7px solid transparent;
+				border-top: 7px solid transparent;
+				margin-left: -7px;
+				position: absolute;
+				top: -14px;
+				left: 50%;
+			}
+		}
+		> ul, .sub-menu-2{
+			@extend %lista;
+			display: none;
+			position: absolute;
+			top: 53px;
+			z-index: 99999999;
+			li{
+				border-bottom: thin dotted $color-blanco;
+				&:last-child{border-bottom:0;}
+				a{
+					color: $color-blanco;
+					display: block;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		&:hover > ul{
+			display: block;
+		}
+		&:hover > .sub-menu-2{
+			@extend %flex-wrap;
+			justify-content: space-between;
+		}
+	}
+}
+//================SUB MENU 2===========================
+.sub-menu-2{
+	
+	width: 100%;
+	> div{
+		border-right: thin dotted $color-blanco;
+		width: 33%;
+		&:last-child{
+			border-right: 0;
+		}
+	}
+	.sub-menu{
+		@extend %lista;
+		
+		display: block !important;
+		padding: 1em;
 	}
 }
 //===================MENU MOBILE=======================
@@ -204,8 +326,9 @@
 				@extend %flex-wrap;
 				align-items: center;
 				span{
-					font-weight: 700;
+					color: #663333;
 					margin-left: 7px;
+					font-weight: 700;
 				}
 			}
 		}
@@ -302,6 +425,10 @@
 	background-color: $color-azul;
 	margin-bottom: 1em !important;
 	width: 100%;
+	h2{
+		font-family: $font-family-contenido;
+		font-weight: 300;
+	}
 }
 //=========================DIRECTOR DREA========================
 .director-drea{
@@ -344,7 +471,7 @@
 	.btn-home{
 		@extend %transition;
 		background-color: #60C300;
-		border-radius: 3px;
+		border-radius: 5px;
 		color: $color-blanco;
 		padding: 0.3em 1em;
 		text-decoration: none;
