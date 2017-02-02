@@ -1,0 +1,108 @@
+//===================================MENU===================================//
+.collapse.navbar-collapse{
+	position: relative;
+	justify-content: center;
+	//cambiando al menú en móvil
+	@media (max-width: 991px) {
+		position: initial;
+	}
+}
+.navbar-light{
+	background: #0A872F;
+	border-bottom: 6px solid #85C226;
+	z-index: 99999999;
+	@media (max-width: 991px) {
+		min-height: 55px;
+	}
+	.logo-mobile{
+		@media (max-width: 991px) {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 40px;
+			width: 150px;
+		}
+	}
+	.navbar-nav{
+		.nav-item{
+			&.active .nav-link, .nav-link{
+				color: #fff;
+			}
+			&.dropdown{
+				position: initial;
+				//cambiando al menú en móvil
+				@media (max-width: 991px) {
+					position: relative;
+				}
+			}
+			.nav-link{
+				font-family: $font-family-contenido;
+				font-weight: 300;
+				font-size: 18px;
+			}
+		}
+	}
+}
+.mega-dropdown-menu{
+	border-radius: 0;
+	padding: 1em;
+	top: 126%;
+	left: -2.5%;
+	width: 105%;
+	//cambiando al menú en móvil
+	@media (max-width: 991px) {
+		left: 0;
+		width: 100%;
+	}
+}
+.animated{
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+//Animación sub menus
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.dropdown.show .caret{
+	display: block;
+	position: relative;
+	&::before{
+		content: "";
+		border-left: 10px solid transparent;
+		border-top: 15px solid #85C226;
+		border-right: 10px solid transparent;
+		border-bottom: 15px solid transparent;
+		height: 0;
+		width:0;
+		margin-left: -10px;
+		position: absolute;
+		left: 50%;
+		bottom: -43px;
+		z-index: 999999999;
+		//cambiando al menú en móvil
+		@media (max-width: 991px) {
+			border: 0;
+		}
+	}
+}

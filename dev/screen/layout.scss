@@ -1,0 +1,172 @@
+//=====================================MAIN================
+.titulo{
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 1em;
+	position: relative;
+	width: 100%;
+	&::before{
+		background-color: #66CC00;
+		content: "";
+		margin-left: -10%;
+		height: 5px;
+		width: 20%;
+		position: absolute;
+		bottom: -5px;
+		left: 50%;
+		z-index: 100;
+	}
+}
+//===============SERVICIOS ACTUALIDAD==================
+.servicios-actualidad{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.lista-servicios{
+	li{
+		border: thin solid transparent;
+		box-sizing: border-box;
+		transition: all 0.5s linear;
+		padding: 5px;
+		margin-bottom: 10px;;
+		width: 50%;
+		&:hover{
+			border: thin dotted #454141;
+		}
+		a{
+			text-decoration: none;
+			&:visited{
+				text-decoration: none;
+			}
+			.fa{
+				color: #666666;
+				font-size: 2.5em;
+				width: 40px;
+				margin-right: 5px;
+			}
+		}
+		.servicios-contenido{
+			width: 77%;
+			h4{
+				font-size: 1.1em;
+			}
+		}
+	}
+}
+.actualidad-cabecera{
+	position: relative;
+}
+.actualidad-ver-todos{
+	background-color: #55D783;
+	margin-left: 10px;
+	padding: 5px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.actualidad{
+	margin-bottom: 1.5em;
+	&:last-child{
+		margin-bottom: 0;
+	}
+	.image{
+		background-size: cover;
+		background-position: center center;
+		height: 145px;
+		width: 30%;
+	}
+	.actualidad-contenido{
+		margin-left: 2%;
+		width: 68%;
+	}
+	.actualidad-vinculo{
+		color: #4A4646;
+	}
+	.actualidad-titulo{
+		color: inherit;
+		font-size: 1.1em;
+		margin-bottom: 0.7em;
+	}
+	.actualidad-parrafo{
+		font-size: 0.9em;
+		margin-bottom: 0.7em;
+	}
+	.actualidad-meta-leer-mas{
+		background-color: #55D783;
+		margin-left: 10px;
+		padding: 5px 10px;
+	}
+	.actualidad-meta-parrafo{
+		font-size: 0.8em;
+	}
+	.actualidad-meta-parrafo{
+		margin-bottom: 0;
+		padding-top: 10px;
+	}
+}
+//===============DOCUMENTOS DE INTERES=====================
+.documentos-interes-link{
+	align-items: center;
+	@extend %transition;
+	color: #999999;
+	font-size: 1em;
+	text-decoration: none !important;
+	&:hover{
+		color: darken(#999999, 10%);
+	}
+	.fa{
+		color: #666666;
+		font-size: 2em;
+		margin-right: 10px;
+	}
+}
+//=========================DIRECTOR DREA========================
+.director-drea{
+	background-color: #ECF0F1;
+	@extend %flex-wrap;
+	padding: 1em;
+	@include media-query($on-small-laptop){
+		//800px
+		
+	}
+	.director-foto{
+		width: 30%;
+		@include media-query($on-small-laptop){
+		//800px
+			width: 100%;
+		}
+		img{
+			border: 5px solid $color-azul;
+			border-radius: 100%;
+			@include media-query($on-small-laptop){
+			//800px
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+	.director-mensaje{
+		text-align: center;
+		width: 70%;
+		@include media-query($on-small-laptop){
+		//800px
+			width: 100%;
+		}
+	}
+	.nombre-director{
+		small{
+			display: block;
+		}
+	}
+	.btn-home{
+		@extend %transition;
+		background-color: #60C300;
+		border-radius: 5px;
+		color: $color-blanco;
+		padding: 0.3em 1em;
+		text-decoration: none;
+		&:hover{
+			background-color: darken(#60C300, 5%);
+		}
+	}
+}

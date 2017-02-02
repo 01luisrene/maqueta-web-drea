@@ -1,0 +1,53 @@
+//Colores
+$color-blanco: #fff;
+$color-gris: #BEBBBB;
+$color-azul: #6AABEE;
+$color-negro: #3D3939;
+$font-family-titulos: 'Montserrat', sans-serif;
+$font-family-contenido: 'Jaldi', sans-serif;
+$bg-menu: #673421;
+
+//FOOTER
+$bg-footer: #666666;
+
+//ANCHOS (responsive design)
+$content: 		1300px;
+$content-block: 		1100px;
+$content-pc:    		1000px;
+$on-laptop: 				900px;
+$on-small-laptop:   800px;
+$on-tablet:					700px;
+$on-small-tablet:   600px;
+$on-smartphone:	   	480px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+//MEDIA QUERIES
+@include media-query($content){
+  //1300px
+}
+@include media-query($content-block){
+  //1100px
+}
+@include media-query($content-pc){
+  //1000px
+}
+@include media-query($on-laptop){
+//900px
+}
+@include media-query($on-small-laptop){
+//800px
+}
+@include media-query($on-tablet){
+//700px
+}
+@include media-query($on-small-tablet){
+//600px
+}
+@include media-query($on-smartphone){
+//480px
+}

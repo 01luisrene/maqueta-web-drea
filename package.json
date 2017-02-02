@@ -24,8 +24,10 @@
     "gulp-group-css-media-queries": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.2.0"
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.1"
   },
   "dependencies": {
     "gulp-connect": "^5.0.0"

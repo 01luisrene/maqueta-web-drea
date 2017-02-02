@@ -1,0 +1,78 @@
+.footer-col{
+	background: $bg-footer;
+	padding-top: 1.5em;
+	p{
+		margin: 0;
+		line-height: 25px;
+		small{
+			display: block;
+		}
+	}
+	.footer-titulo{
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.redes-sociales{
+		display: inline-block;
+		@extend %transition;
+		margin-right: 15px;
+		&:nth-child(3){
+			margin-right:0;
+		}
+		&:hover{
+			color: #FA3E92;
+		}
+	}
+	a{
+		color: $color-blanco;
+		& .fa{
+			font-size: 2em;
+		}
+	}
+	.libro{
+		display: inline-block;
+		text-decoration: none;
+		border-bottom: thin dotted $color-blanco;
+		line-height: 1.2;
+		font-size: 1.2em;
+		margin-top: 1em;
+	}
+	.eslogan{
+		@extend %flex-nowrap;
+		margin: 2em 0;
+		p{
+			font-size: 1.3em;
+			font-weight: 700;
+			letter-spacing: 1.5px;
+			margin-left: 0.5em;
+			padding-top: 0.5em;
+		}
+	}
+}
+.footer-col-2{
+	text-align: center;
+}
+//=====================================BOTÓN SUBIR=========================//
+a.boton-subir{
+  display: none;
+  background: lighten($color-azul, 5%);
+  border: 2px solid darken($color-azul, 3%);
+  border-radius: 5px;
+  height: 35px;
+  width: 30px;
+  position: fixed;
+  right: 15px;
+  bottom:15px;
+  z-index: 999999999;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    background: lighten($color-azul, 2%);
+  }
+  i{
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px 5px 5px 7px;
+  }
+}
