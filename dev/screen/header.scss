@@ -55,28 +55,27 @@
 	 		}
 	 	}
 	 	a{
-	 		color: #009933;
+	 		color: $header-redes-link-color;
   		text-decoration: none;
 	 	}
 	 	.fa {
-		  background-color: #009933;
+		  background-color: $header-redes-link-color;
 		  border-radius: 50%;
 		  color: #fff;
 		  text-align: center;
-		  vertical-align: middle;
 		  font-size: 1.2rem;
 		  height: 30px;
 		  width: 30px;
 		  padding-top: 5px;
 		}
 		.fa-facebook {
-		  background-color: #336699; 
+		  background-color: $header-redes-facebook-bg; 
 		}
 		.fa-twitter {
-  		background-color: #0099CC;
+  		background-color: $header-redes-twitter-bg;
   	}
   	.fa-youtube {
-  		background-color: #CC3333; 
+  		background-color: $header-redes-youtube-bg; 
   	}
 	}
 }

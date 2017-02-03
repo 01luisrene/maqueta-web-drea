@@ -3,9 +3,40 @@ $color-blanco: #fff;
 $color-gris: #BEBBBB;
 $color-azul: #6AABEE;
 $color-negro: #3D3939;
+$color-verde: #0A872F;
 $font-family-titulos: 'Montserrat', sans-serif;
 $font-family-contenido: 'Jaldi', sans-serif;
-$bg-menu: #673421;
+$font-size-base: 15px;
+
+//HEADER
+$header-redes-link-color: #009933;
+$header-redes-facebook-bg: #336699;
+$header-redes-twitter-bg: #0099CC;
+$header-redes-youtube-bg: #CC3333;
+
+//MENU
+$menu-bg: $color-verde;
+$menu-border-bottom-color: #85C226;
+$menu-link-color: #fff;
+$menu-link-color-hover: #1E1C1C;
+
+//LAYOUT
+$titulo-subrayado-color: $menu-border-bottom-color;
+
+//SERVICIOS 
+$servicios-color: #272525;
+$servicios-iconos-color: #666666;
+$servicios-titulo-color: #18814B; //BCG
+$servicios-borde-color: $servicios-titulo-color;//BCG
+
+//ACTUALIDAD
+$actualidad-titulo-color: $servicios-titulo-color; //BCG
+$leer-mas-bg: #55D783;
+$leer-mas-color-borde: #0A872F;
+
+//DOCUMENTOS INTERES
+$doc-int-color: #484646;
+$doc-int-color-icono: #666666;
 
 //FOOTER
 $bg-footer: #666666;
