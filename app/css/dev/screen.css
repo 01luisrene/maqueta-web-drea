@@ -119,7 +119,7 @@ blockquote::after {
 .navbar-light .navbar-nav .nav-item.active .nav-link,
 .navbar-light .navbar-nav .nav-item .nav-link:hover {
   color: #1E1C1C;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
@@ -128,7 +128,7 @@ blockquote::after {
 
 .navbar-light .navbar-nav .nav-item .nav-link:hover {
   color: #1E1C1C;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .navbar-light .navbar-nav .nav-item.dropdown {
