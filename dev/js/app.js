@@ -1,45 +1,15 @@
-var $menu_mobile = $('#js_menu_mobile');
 var $drea_js = (function ($) {
   //==========Buscador=====================
   var buscador = function(){
-    $('.js_buscador').on('focus',  function(event) {
+    $('.js_caja_buscador').on('focus',  function(event) {
       event.preventDefault();
       $('.js_icono_buscador').css({
-        color: '#6AABEE'
+        color: '#5cb3fd'
       });
     });
-    $('.js_buscador').on('focusout',  function(event) {
+    $('.js_caja_buscador').on('focusout',  function(event) {
       event.preventDefault();
       $('.js_icono_buscador').removeAttr('style');
-    });
-  },
-  //==========Menú móvil=====================
-  menu_mobile = function(){
-    $('.js_block_menu').on('click', function(event) {
-        event.preventDefault();
-        $menu_mobile.css({
-            display: 'block'
-        });
-        $menu_mobile.addClass('bounceInRight').removeClass('fadeOutRight');
-    });
-    $('#cerrar-menu-mobile').on('click', function(event) {
-        event.preventDefault();
-        $menu_mobile.css({
-            display: 'none'
-        });
-        $menu_mobile.removeAttr('style');
-        $menu_mobile.addClass('fadeOutRight').removeClass('bounceInRight');
-        setTimeout(function(){ $menu_mobile.css('display', 'none'); }, 500);
-    });
-    //=======================Ocultar menu cuando es mayo 1000px==================
-    $(window).resize(function() {
-      var height = $(this).height();
-      if($(this).width() > height){
-        var width = $(this).width();
-        $menu_mobile.css({
-            display: 'none'
-        });
-      }
     });
   },
   //=====================SLIDER MAIN==================
@@ -142,7 +112,6 @@ var $drea_js = (function ($) {
   },
   init = function () {
     buscador();
-    menu_mobile();
     slider_main();
     small_carousel();
     enlaces_interes_carousel();

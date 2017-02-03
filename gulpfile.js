@@ -8,7 +8,9 @@ var gulp          = require('gulp'),
     postCss       = require('gulp-postcss'),
     uglify        = require('gulp-uglify'),
     rename        = require("gulp-rename"),
-    notify        = require('gulp-notify');
+    notify        = require('gulp-notify'),
+    concatCss     = require('gulp-concat-css'),
+    concat        = require("gulp-concat");
 
 /*Servidor Local*/
 gulp.task('connect', function() {  
@@ -61,10 +63,9 @@ gulp.task('bootstrap4', function(){
   .pipe(sourceMaps.init())
   .pipe(postCss(processors))
   .pipe(gcmq())
-  .pipe(cleanCss())
   .pipe(sourceMaps.write('.'))
-  .pipe(rename('bootstrap.min.css'))
-  .pipe(gulp.dest('./app/plugins/bootstrap'))
+  .pipe(rename('bootstrap.css'))
+  .pipe(gulp.dest('./dev/librerias-css'))
   .pipe(notify("Ha finalizado la tarea bootstrap4"));
 });
 
@@ -82,6 +83,30 @@ gulp.task('ficheros', function () {
     .pipe(connect.reload());
 });
 
+//Comprimir librerías css
+gulp.task('librerias-css', function () {
+  return gulp.src('./dev/librerias-css/**/*.css')
+    .pipe(concatCss("libs.min.css"))
+    .pipe(cleanCss())
+    .pipe(gulp.dest('./app/css'))
+    .pipe(notify('Tarea librerias-css terminada!!!'));
+});
+
+//Comprimir archivos js
+gulp.task("librerias-js", function () {
+  return gulp.src(
+    ["./dev/librerias-js/tether.min.js",
+    "./dev/librerias-js/bootstrap.min.js",
+    "./dev/librerias-js/jquery.sliderPro.min.js",
+    "./dev/librerias-js/owl.carousel.min.js",
+    "./dev/librerias-js/jquery.fitvids.js",
+    "./dev/librerias-js/jquery.bxslider.min.js"]
+    )
+  .pipe(concat('libs.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('./app/js/'))
+  .pipe(notify('Tarea librerias-js terminada!!!'));
+});
 
 gulp.task('watch', function () {  
   //gulp.watch(['./app/**/*'], ['ficheros']);
@@ -89,9 +114,22 @@ gulp.task('watch', function () {
   gulp.watch(['./dev/screen/**/*'], ['screen-desarrollo']);
   gulp.watch(['./dev/js/**/*'], ['fichero-js']);
   gulp.watch(['./dev/bootstrap4/**/*'], ['bootstrap4']);
+  gulp.watch(['./dev/librerias-css/**/*.css'], ['librerias-css']);
+  gulp.watch(['./dev/librerias-js/**/*.js'], ['librerias-js']);
 });
 
 /*
 Tarea por defecto de gulp.js  
 */
-gulp.task('default', ['connect', 'watch', 'screen', 'screen-desarrollo', 'fichero-js', 'bootstrap4']);
+gulp.task(
+  'default',
+    ['connect', 
+    'watch', 
+    'screen', 
+    'screen-desarrollo', 
+    'fichero-js', 
+    'bootstrap4', 
+    'librerias-css',
+    'librerias-js'
+    ]
+  );

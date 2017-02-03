@@ -85,10 +85,20 @@
 	padding-bottom: 0.5em;
 	.buscador-form{
 		margin-top: -10px;
+		position: relative;
 		width: 450px;
 		@media (max-width: 767px) {
 			margin-top: 0;
 			width: 100%;
+		}
+		.js_icono_buscador{
+			color: #B0AEAE;
+			position: absolute;
+			right: 5px;
+			top: 12px;
+		}
+		.form-control{
+			padding-right: 25px;
 		}
 	}
 }
