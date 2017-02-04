@@ -212,13 +212,3 @@
 		display: block;
 	}
 }
-.btn-home{
-	background-color: #60C300;
-	border-radius: 5px;
-	color: $color-blanco;
-	padding: 0.3em 1em;
-	text-decoration: none;
-	&:hover{
-		background-color: darken(#60C300, 5%);
-	}
-}

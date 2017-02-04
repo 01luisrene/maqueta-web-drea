@@ -26,7 +26,6 @@
 		.nav-item{
 			&.active .nav-link, .nav-link:hover{
 				color: $menu-link-color-hover;
-				font-weight: 400;
 			}
 			.nav-link{
 				color: $menu-link-color;
@@ -44,7 +43,7 @@
 			}
 			.nav-link{
 				font-family: $font-family-contenido;
-				font-weight: 300;
+				font-weight: 400;
 				font-size: $font-size-base + 3;
 			}
 		}

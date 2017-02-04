@@ -5,10 +5,8 @@
   text-align: center;
   -webkit-tap-highlight-color: transparent; }
   .owl-theme .owl-nav [class*='owl-'] .fa{
-    color: #fff;
+    color: #E3E2E2;
     font-size: 2em;
-    margin-top: 5px;
-    margin-right: 5px;
   }
   .owl-theme .owl-nav [class*='owl-']{
     color: #FFF;
@@ -26,13 +24,19 @@
     top: 50%;
     left: 0;
   }
+  .owl-theme .owl-nav .owl-prev i{
+    margin-top: 5px;
+  }
   .owl-theme .owl-nav .owl-next{
     position: absolute;
     margin-top: -22px;
     top: 50%;
     right: 0;
   }
-    .owl-theme .owl-nav [class*='owl-']:hover {
+  .owl-theme .owl-nav .owl-next i{
+    margin-top: 5px;
+  }
+  .owl-theme .owl-nav [class*='owl-']:hover {
       background: rgba(134, 151, 145, 0.5);
       color: #FFF;
       text-decoration: none; }
