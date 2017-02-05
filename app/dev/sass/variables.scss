@@ -1,0 +1,91 @@
+//Colores
+$color-blanco: #fff;
+$color-gris: #BEBBBB;
+$color-azul: #6AABEE;
+$color-negro: #3D3939;
+$color-verde: #0A872F;
+
+//Font
+$font-family-titulos: 'Open Sans', sans-serif;
+$font-family-contenido: 'Lato', sans-serif;
+$font-size-base: 15px;
+
+$theme-color: #36C171;
+
+//HEADER
+$header-redes-link-color: #009933;
+$header-redes-facebook-bg: #336699;
+$header-redes-twitter-bg: #0099CC;
+$header-redes-youtube-bg: #CC3333;
+
+//MENU
+$menu-bg: #36C171;
+$menu-border-bottom-color: #85C226;
+$menu-link-color: #fff;
+$menu-link-color-hover: #1E1C1C;
+
+//LAYOUT
+$titulo-subrayado-color: $theme-color;
+
+//SERVICIOS 
+$servicios-color: #272525;
+$servicios-iconos-color: #666666;
+$servicios-titulo-color: #18814B; //BCG
+$servicios-borde-color: $servicios-titulo-color;//BCG
+
+//ACTUALIDAD
+$actualidad-titulo-color: $servicios-titulo-color; //BCG
+$leer-mas-bg: #55D783;
+$leer-mas-color-borde: #0A872F;
+
+//DOCUMENTOS INTERES
+$doc-int-color: #484646;
+$doc-int-color-icono: #666666;
+
+//FOOTER
+$bg-footer: #666666;
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+

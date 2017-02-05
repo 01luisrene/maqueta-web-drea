@@ -1,54 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Bienvenidos - Direccón Regional de Educación</title>
-    <link rel="stylesheet" href="/css/libs.min.css">
-    <link rel="stylesheet" href="/css/screen.css">
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="author" content="" />
+    <meta name="application-name" content=""/>
+    <meta name="geo.placename" content="Chachapoyas" />
+    <meta name="geo.region" content="PE" />
+
+    <meta name="theme-color" content="#5FE59B" />
+
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+
+    <!-- Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="" />
+    <meta name="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="fb:app_id" content="codigo de la app" />
+    <!-- Fin Facebook -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@drea" />
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:url" content="" />
+   <!-- Fin Twitter -->
+
+    <link rel="canonical" href=""/>
+    <link rel="sitemap" type="application/xml" title="sitemap" href="sitemap.xml"/>
+    <link rel="alternate" type="application/rss+xml" title="" href="feed.xml"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="plugins-css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins-css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins-css/slider-pro.min.css">
+    <link rel="stylesheet" href="plugins-css/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins-css/owl.theme.default.css">
+    <link rel="stylesheet" href="plugins-css/jquery.bxslider.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i|Open+Sans:400,400i,600,600i,700" rel="stylesheet">
-</head>
-<body>
-<!-- HEADER -->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-12">
-        <div class="box-logos-redes flex-fwrap">
-          <!-- Sección logos -->
-          <div class="box-logos flex">
-            <img class="hidden-md-down" src="/images/logo_peru.svg" alt="">
-            <img class="hidden-md-down" src="/images/logo_drea.svg" alt="">
-            <a class="img-meta-veinte" href="#" style="background-image: url('/images/lametaes20.png');"></a>
-          </div>
-          <!-- Sección redes -->
-          <div class="box-redes">
-            <ul class="redes-sociales flex-aic no-list">
-              <li><a class="flex-aic" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="flex-aic" href="#"><i class="fa fa-twitter "></i></a></li>
-              <li><a class="flex-aic" href="#"><i class="fa fa-youtube "></i></a></li>
-              <li><a class="flex-aic" href="#"><i class="fa fa-user"></i>&nbsp;Contacto</a></li>
-              <li><a class="flex-aic" href="#"><i class="fa fa-envelope"></i>&nbsp;Correo</a></li>
-              <li><a class="flex-aic" href="#"><i class="fa fa-search"></i>&nbsp;Transparencia</a></li>
-            </ul>
-          </div>
+    <link rel="stylesheet" href="css/screen.css">
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <!-- Logos -->
+        <div class="box-logos col-3 col-sm-3 col-md-3 col-lg-6 col-xl-7 d-inline-flex align-items-center">
+          <img class="hidden-md-down" src="images/logo_peru.svg" alt="">
+          <img class="hidden-md-down" src="images/logo_drea.svg" alt="">
+          <a class="img-meta-veinte" href="#">
+            <img src="images/lametaes20.png" alt="La meta es veinte">
+          </a>
         </div>
-        <!-- Sección buscador -->
-        <div class="box-buscador flex">
+        <!-- Redes sociales -->
+        <div class="box-redes-sociales col-9 col-sm-9 col-md-9 col-lg-6 col-xl-5">
+          <ul class="redes-sociales list-inline list-unstyled">
+            <li class="list-inline-item">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fa fa-twitter "></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fa fa-youtube "></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fa fa-user"></i>&nbsp;Contacto</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fa fa-envelope"></i>&nbsp;Correo</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fa fa-search"></i>&nbsp;Transparencia</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Buscador -->
+        <div class="box-buscador col-sm-12 col-lg-5 offset-sm-0 offset-lg-7">
           <form class="buscador-form" id="bloque-buscar" action="#">
             <i class="fa fa-search js_icono_buscador" aria-hidden="true"></i>
             <input type="text" class="form-control input-sm js_caja_buscador" placeholder="Busca noticias, trámites, servicios...">
           </form>
         </div>
-        
-        <!-- MENU WEB -->
-        <nav class="col-sm-12 navbar navbar-toggleable-md navbar-light navbar-drea">
+
+        <!-- Menú web: colocar la clase fixed-top para móvil --> 
+        <nav class="navbar-drea col-sm-12 navbar navbar-toggleable-md navbar-light">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="logo-mobile" href="/" style="background-image: url('/images/logo_drea_white.svg');"></a>
+          <a class="logo-mobile d-flex align-items-center" href="/">
+            <img class="img-logo" src="images/logo_drea_white.svg" alt="Gobierno Regional de Educación  Amazonas">
+            <p class="texto-drea text-uppercase text-white">
+              Gobierno Regional de<br> Educación Amazonas
+            </p>
+          </a>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item active">
@@ -118,13 +174,10 @@
               </li>
             </ul>
           </div>
-        </nav> <!--  FIN MENU WEB -->
-
+        </nav> <!--  Fin menú web -->     
       </div>
-    </div>
-  </div>
-</header>
-<!-- Sección: Slider principal -->
+    </header>
+    <!-- Sección: Slider principal -->
 <section class="box-slider-main container">
   <div class="row">
     <div class="col-sm-12 col-xs-12">
@@ -132,25 +185,25 @@
       <div class="sp-slides">
         <div class="sp-slide">
           <a href="http://www.drea.gob.pe/" target="_blank">
-            <img class="sp-image" src="/images/slider_main/bg1.jpg">
+            <img class="sp-image" src="images/slider_main/bg1.jpg">
             <h2 class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</h2>
           </a>
         </div>
         <div class="sp-slide">
           <a href="http://www.drea.gob.pe/" target="_blank">
-            <img class="sp-image" src="/images/slider_main/bg2.jpg">
+            <img class="sp-image" src="images/slider_main/bg2.jpg">
             <h2 class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatibus.</h2>
           </a>
         </div>
         <div class="sp-slide">
           <a href="http://www.drea.gob.pe/" target="_blank">
-            <img class="sp-image" src="/images/slider_main/bg3.png">
+            <img class="sp-image" src="images/slider_main/bg3.jpg">
             <h2 class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, aperiam.</h2>
           </a>
         </div>
         <div class="sp-slide">
           <a href="http://www.drea.gob.pe/" target="_blank">
-            <img class="sp-image" src="/images/slider_main/bg4.jpg">
+            <img class="sp-image" src="images/slider_main/bg4.jpg">
             <h2 class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aut.</h2>
           </a>
         </div>
@@ -163,9 +216,9 @@
   <div class="row">
     <div class="col-lg-6 servicios">
     <h2 class="titulo">Servicios</h2>
-      <ul class="lista-servicios flex-fwrap no-list">
+      <ul class="lista-servicios list-unstyled d-flex flex-wrap">
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Consulta tu Trámite</h4>
@@ -174,7 +227,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Directorio Telefónico</h4>
@@ -183,7 +236,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Libro de Reclamos</h4>
@@ -192,7 +245,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Oportunidad Laboral</h4>
@@ -201,7 +254,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Atractivos Turísticos</h4>
@@ -210,7 +263,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-gavel" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Normatividad</h4>
@@ -219,7 +272,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Consulte su Expediente SIAF</h4>
@@ -228,7 +281,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">T.U.P.A</h4>
@@ -237,7 +290,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Padrón de Instituciones Educativas</h4>
@@ -246,7 +299,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Consulte su tramite</h4>
@@ -255,7 +308,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Consulte su tramite</h4>
@@ -264,7 +317,7 @@
           </a>
         </li>
         <li class="servicios-item">
-          <a class="flex-aic-fwrap servicios-link" href="#">
+          <a class="servicios-link d-flex flex-wrap align-items-center" href="#">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             <span class="servicios-contenido">
               <h4 class="servicios-titulo">Consulte su tramite</h4>
@@ -280,8 +333,8 @@
         <a class="actualidad-ver-todos" href="#">Ver todos</a>
       </div>
       
-      <div class="actualidad flex-fwrap">
-        <div class="image" style="background-image: url('/images/actualidad/bg01.jpg');"></div>
+      <div class="actualidad d-flex flex-wrap align-items-start">
+        <div class="image" style="background-image: url('images/actualidad/bg01.jpg');"></div>
         <div class="actualidad-contenido">
           <a class="actualidad-vinculo" href="#">
             <h4 class="actualidad-titulo">DREA con miras al cumplimiento de compromisos de Desempeño 2017</h4>
@@ -291,7 +344,7 @@
             en las inmediaciones de la Dirección 
             Regional de Educación de Amazonas ...
           </p>
-          <span class="actualidad-meta flex-aic-jsb-w">
+          <span class="actualidad-meta d-flex flex-wrap align-items-center justify-content-between">
             <p class="actualidad-meta-parrafo">
               <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 01 de febrero 2017
             </p>
@@ -302,8 +355,8 @@
         </div>
       </div>
 
-      <div class="actualidad flex-fwrap">
-        <div class="image" style="background-image: url('/images/actualidad/bg01.jpg');"></div>
+      <div class="actualidad d-flex flex-wrap align-items-start">
+        <div class="image" style="background-image: url('images/actualidad/bg01.jpg');"></div>
         <div class="actualidad-contenido">
           <a class="actualidad-vinculo" href="#">
             <h4 class="actualidad-titulo">DREA con miras al cumplimiento de compromisos de Desempeño 2017</h4>
@@ -313,7 +366,7 @@
             en las inmediaciones de la Dirección 
             Regional de Educación de Amazonas ...
           </p>
-          <span class="actualidad-meta flex-aic-jsb-w">
+          <span class="actualidad-meta d-flex flex-wrap align-items-center justify-content-between">
             <p class="actualidad-meta-parrafo">
               <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 01 de febrero 2017
             </p>
@@ -324,8 +377,8 @@
         </div>
       </div>
 
-      <div class="actualidad flex-fwrap">
-        <div class="image" style="background-image: url('/images/actualidad/bg01.jpg');"></div>
+      <div class="actualidad d-flex flex-wrap align-items-start">
+        <div class="image" style="background-image: url('images/actualidad/bg01.jpg');"></div>
         <div class="actualidad-contenido">
           <a class="actualidad-vinculo" href="#">
             <h4 class="actualidad-titulo">DREA con miras al cumplimiento de compromisos de Desempeño 2017</h4>
@@ -335,7 +388,7 @@
             en las inmediaciones de la Dirección 
             Regional de Educación de Amazonas ...
           </p>
-          <span class="actualidad-meta flex-aic-jsb-w">
+          <span class="actualidad-meta d-flex flex-wrap align-items-center justify-content-between">
             <p class="actualidad-meta-parrafo">
               <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 01 de febrero 2017
             </p>
@@ -357,22 +410,22 @@
       <div class="owl-carousel owl-theme js_small_carousel">
         <div>
           <a href="#">
-            <img src="/images/small_carousel/apple.jpg">
+            <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/images/small_carousel/apple.jpg">
+            <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/images/small_carousel/apple.jpg">
+            <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/images/small_carousel/apple.jpg">
+            <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
       </div>
@@ -404,43 +457,43 @@
     </div>
 
     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link flex-aic" href="#">
+      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
         <i class="fa fa-file-text-o" aria-hidden="true"></i> Proyecto educativo regional
       </a>
     </div>
     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link flex-aic" href="#">
+      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
         <i class="fa fa-file-text-o" aria-hidden="true"></i> Documentos de gestión
       </a>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link flex-aic" href="#">
+      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
         <i class="fa fa-search" aria-hidden="true"></i> TUPA
       </a>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link flex-aic" href="#">
+      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
         <i class="fa fa-gavel" aria-hidden="true"></i> Normatividad
       </a>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link flex-aic" href="#">
+      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
         <i class="fa fa-phone-square" aria-hidden="true"></i> Directorio
       </a>
     </div>
   </div>
 </section>
 <!-- Sección: Director DREA -->
-<section class="box-director-drea container">
-  <div class="row director-drea">
-    <div class="col-sm-12 col-md-4 col-lg-3 director-foto">
-      <img class="rounded-circle" src="/images/director.jpg" alt="Director de la Dirección Regional de Educación Amazonas">
+<section class="box-lideres container">
+  <div class="row lider-drea">
+    <div class="lider-foto col-sm-12 col-md-4 col-lg-3">
+      <img class="rounded-circle" src="images/lideres/director.jpg" alt="Dirección Regional de Educación Amazonas">
     </div>
-    <div class="col-sm-12 col-md-8 col-lg-9 director-contenido">
-      <blockquote>
+    <div class="lider-contenido col-sm-12 col-md-8 col-lg-9 text-center">
+      <blockquote class="lider-mensaje">
         <p>Uno de los desafíos fundamentales para el futuro de nuestro país, es el desafío de la educación.  Es en el campo educativo donde se configura el futuro y el bienestar de nuestros actuales niños y niñas, así como de las próximas generaciones.</p>
       </blockquote>
-      <h4 class="nombre-director">Edgar Moises Julca Chuquista <small>Director Regional</small></h4>
+      <h4 class="lider-nombre">Edgar Moises Julca Chuquista <br><small class="text-muted">Director Regional</small></h4>
       <a class="btn btn-success" href="#">Ver Agenda</a>
     </div>
   </div>
@@ -453,42 +506,42 @@
       <div class="js_enlaces_interes owl-carousel owl-theme">
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt="">
+            <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt="">
+            <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt="">
+            <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt="">
+            <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt="">
+            <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt="">
+            <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/minedu.jpg" alt="">
+            <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
           <a href="#">
-            <img src="/assets/images/slider_enlaces_interes/peru_educa.jpg" alt="">
+            <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
       </div>
@@ -498,25 +551,25 @@
 <!-- FOOTER -->
 <footer class="box-footer container">
   <div class="row footer">
-      <div class="col-md-6 col-lg-6 contacto">
+      <div class="footer-contacto col-md-6 col-lg-6 ">
         <h3 class="footer-titulo">Contacto</h3>
         <p>
-        <small>Dirección Regional de Educación Amazonas</small>
-        <small>
+        <small class="d-block">Dirección Regional de Educación Amazonas</small>
+        <small class="d-block">
           <i class="fa fa-map-marker" aria-hidden="true"></i> Jr. Junin N° 1143 - Chachapoyas - Amazonas
         </small>
-        <small>
+        <small class="d-block">
           <i class="fa fa-envelope" aria-hidden="true"></i> info@drea.gob.pe
         </small>
-        <small>
+        <small class="d-block">
           <i class="fa fa-phone" aria-hidden="true"></i> 041-478275  Fax. 041-477009
         </small>
-        <small>
+        <small class="d-block">
           <i class="fa fa-clock-o" aria-hidden="true"></i> Atencion al ciudadano: Lun - Vi 8:00 am a 4:30 pm
         </small>
         </p>
       </div>
-      <div class="col-md-6 col-lg-6 footer-drea">
+      <div class="footer-drea col-md-6 col-lg-6 ">
         <a class="redes-sociales" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         <a class="redes-sociales" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         <a class="redes-sociales" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
@@ -525,21 +578,28 @@
             <i class="fa fa-book" aria-hidden="true"></i> Libro de reclamaciones
           </a>
         </p>
-        <div class="footer-eslogan flex-aic-jcenter">
-          <img src="/images/logo_gra.png" height="100" alt="Gobierno Regional Amazonas">
+        <div class="footer-eslogan d-flex justify-content-center align-items-center">
+          <img src="images/logo_gra.png" height="100" alt="Gobierno Regional Amazonas">
           <p>GOBIERNO REGIONAL <br> AMAZONAS <br/> ... justo y solidario!!!</p>
         </div>
-        <p class="copyright-drea"><small>&copy; 2017 Dirección Regional de Educación Amazonas</small></p>
+        <p class="copyright-drea d-block text-right"><small>&copy; 2017 Dirección Regional de Educación Amazonas</small></p>
       </div>
   </div>
 </footer>
+
 <!-- Botón Subir -> top -->
 <a href="#" id="js_up" class="boton-subir" style="display: none">
   <i class="fa fa-angle-double-up" aria-hidden="true"></i>
 </a>
-<!-- Librerías JavaScript & Script de la plantilla -->
-<script src="/js/jquery-3.1.1.slim.min.js"></script>
-<script src="/js/libs.min.js"></script>
-<script src="/js/app.min.js"></script>
-</body>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="plugins-js/jquery.min.js"></script>
+  <script src="plugins-js/tether.min.js"></script>
+  <script src="plugins-js/bootstrap.min.js"></script>
+  <script src="plugins-js/jquery.sliderPro.min.js"></script>
+  <script src="plugins-js/owl.carousel.min.js"></script>
+  <script src="plugins-js/jquery.fitvids.js"></script>
+  <script src="plugins-js/jquery.bxslider.min.js"></script>
+  <script src="js/app.min.js"></script>
+  </body>
 </html>

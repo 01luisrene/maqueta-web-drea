@@ -1,0 +1,132 @@
+.footer{
+  background: $bg-footer;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  //FOOTER RESET
+  p{
+    margin: 0;
+    line-height: 25px;
+    small{
+      font-size: 95%;
+      margin-bottom: 0.5em;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .footer-contacto{
+    @media (max-width: 767px) {
+      margin-bottom: 1.5em;
+    }
+  }
+  .footer-titulo{
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  //====================REDES SOCIALES FOOTER=======================//
+  .redes-sociales{
+    display: inline-block;
+    margin-right: 15px;
+    &:nth-child(3){
+      margin-right:0;
+    }
+    .fa{
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.2rem;
+      text-align: center;
+      transition: all 0.500s ease;
+      padding-top: 6px;
+      height: 30px;
+      width: 30px;
+      &.fa-facebook:hover{
+        background-color: #fff;
+        color: $header-redes-facebook-bg;
+      }
+      &.fa-twitter:hover{
+        background-color: #fff;
+        color: $header-redes-twitter-bg;
+      }
+      &.fa-youtube:hover{
+        background-color: #fff;
+        color: $header-redes-youtube-bg;
+      }
+    }
+    .fa-facebook {
+      background-color: $header-redes-facebook-bg; 
+    }
+    .fa-twitter {
+      background-color: $header-redes-twitter-bg;
+    }
+    .fa-youtube {
+      background-color: $header-redes-youtube-bg; 
+    }
+  }
+  //CONTENEDOR DREA
+  .footer-drea{
+    text-align: center;
+    @media (max-width: 767px) {
+      border-top: thin dotted #fff;
+      padding-top: 1em;
+    }
+  }
+  //FOOTER LIBRO
+  .footer-libro{
+    color: #fff;
+    margin: 0.5em auto;
+    a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: thin dotted $color-blanco;
+      line-height: 1.2;
+      font-size: 1.2em;
+      margin-top: 1em;
+    }
+    &:visited{
+      color: #fff;
+    }
+  }
+  //FOOTER SLOGAN
+  .footer-eslogan{
+    margin: 0.5em 0;
+    p{
+      font-size: 1.2em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-left: 0.5em;
+      padding-top: 0.5em;
+    }
+  }
+  //COPY
+  .copyright-drea{
+    text-align: right;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}
+//=====================================BOTÓN SUBIR=========================//
+a.boton-subir{
+  display: none;
+  background: lighten($color-azul, 5%);
+  border: 2px solid darken($color-azul, 3%);
+  border-radius: 5px;
+  height: 35px;
+  width: 30px;
+  position: fixed;
+  right: 15px;
+  bottom:15px;
+  z-index: 999999999;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    background: lighten($color-azul, 2%);
+  }
+  i{
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px 8px 5px 5px;
+  }
+}
