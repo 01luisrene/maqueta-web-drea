@@ -36,15 +36,19 @@
 	}
 }
 .lista-servicios{
+	margin-bottom: 0;
 	.servicios-item{
 		border: thin solid transparent;
 		box-sizing: border-box;
 		transition: all 0.500s linear;
 		padding: 5px;
-		margin-bottom: 10px;;
+		margin-bottom: 10px;
 		width: 50%;
 		@media (max-width: 767px) {
 			width: 100%;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 		&:hover{
 			border: thin dotted $servicios-borde-color;
@@ -96,10 +100,6 @@
 	}
 }
 .actualidad{
-	margin-bottom: 1.5em;
-	&:last-child{
-		margin-bottom: 0;
-	}
 	.image{
 		background-size: cover;
 		background-position: center center;
@@ -145,25 +145,35 @@
 		padding-top: 10px;
 	}
 }
-//===============DOCUMENTOS DE INTERES=====================
-.documentos-interes{
-		background-color: #91DBA7;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		> div + div{
-			@media (max-width: 1199px) {
-				margin-bottom: 1.5em;
-			}
-			@media (max-width: 575px) {
-				&:last-child{
-					margin-bottom: 0;
-				}
-			}
-		}
+//===============SLIDER FOTOS=====================
+.slider-fotos{
+	margin-bottom: 2em;
 }
 
+//===============SLIDER VIDEOS======================
+.bx-wrapper{
+	.bx-prev, .bx-next{
+		transition: none;
+	}
+}
+
+//===============DOCUMENTOS DE INTERES=====================
+.box-documentos-interes{
+	background-color: #91DBA7;
+}
+.documentos-interes{
+	> div + div{
+		@media (max-width: 1199px) {
+			margin-bottom: 1.5em;
+		}
+		@media (max-width: 575px) {
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 .documentos-interes-link{
-	align-items: center;
 	color: $doc-int-color;
 	font-size: 1em;
 	text-decoration: none !important;
@@ -174,5 +184,28 @@
 		color: $doc-int-color-icono;
 		font-size: 2em;
 		margin-right: 10px;
+	}
+}
+//===============LIDER DREA=====================
+.box-lideres{
+	background-color: #ECF0F1;
+}
+.lider-drea{
+	.lider-foto{
+		@media (max-width: 767px) {
+			margin-bottom: 15px;
+		}
+	}
+	.foto{
+		border: 5px solid $color-azul;
+		@media (max-width: 767px) {
+			display: block;
+			margin:  auto;
+			height: 150px;
+			width: 150px;
+		}
+	}
+	.lider-nombre{
+		margin-bottom: 15px;
 	}
 }

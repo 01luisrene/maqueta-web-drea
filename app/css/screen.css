@@ -69,6 +69,22 @@ blockquote::after {
   padding-bottom: 0;
 }
 
+.logo-mobile.d-flex {
+  display: none !important;
+  text-decoration: none;
+}
+
+.logo-mobile.d-flex .texto-drea {
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 0;
+}
+
+.navbar {
+  background-color: #36C171;
+  margin-bottom: 1em;
+}
+
 .box-logos {
   margin-top: 0.5em;
 }
@@ -162,21 +178,6 @@ blockquote::after {
   padding-right: 25px;
 }
 
-.logo-mobile.d-flex {
-  display: none !important;
-}
-
-.logo-mobile.d-flex .texto-drea {
-  font-size: 13px;
-  line-height: 16px;
-  margin-bottom: 0;
-}
-
-.navbar {
-  background-color: #36C171;
-  margin-bottom: 1em;
-}
-
 .titulo {
   text-align: center;
   margin-top: 0;
@@ -195,6 +196,10 @@ blockquote::after {
   bottom: -5px;
   left: 50%;
   z-index: 100;
+}
+
+.lista-servicios {
+  margin-bottom: 0;
 }
 
 .lista-servicios .servicios-item {
@@ -262,14 +267,6 @@ blockquote::after {
   color: #fff;
 }
 
-.actualidad {
-  margin-bottom: 1.5em;
-}
-
-.actualidad:last-child {
-  margin-bottom: 0;
-}
-
 .actualidad .image {
   background-size: cover;
   background-position: center center;
@@ -324,15 +321,20 @@ blockquote::after {
   padding-top: 10px;
 }
 
-.documentos-interes {
+.slider-fotos {
+  margin-bottom: 2em;
+}
+
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-next {
+  transition: none;
+}
+
+.box-documentos-interes {
   background-color: #91DBA7;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 .documentos-interes-link {
-  -ms-flex-align: center;
-  align-items: center;
   color: #484646;
   font-size: 1em;
   text-decoration: none !important;
@@ -346,6 +348,18 @@ blockquote::after {
   color: #666666;
   font-size: 2em;
   margin-right: 10px;
+}
+
+.box-lideres {
+  background-color: #ECF0F1;
+}
+
+.lider-drea .foto {
+  border: 5px solid #6AABEE;
+}
+
+.lider-drea .lider-nombre {
+  margin-bottom: 15px;
 }
 
 .footer {
@@ -449,8 +463,8 @@ blockquote::after {
 
 .footer .footer-eslogan p {
   font-size: 1.2em;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   margin-left: 0.5em;
   padding-top: 0.5em;
 }
@@ -506,6 +520,20 @@ a.boton-subir i {
 }
 
 @media (max-width: 991px) {
+  .logo-mobile.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .logo-mobile.d-flex .img-logo {
+    max-height: 41px;
+  }
+
+  .navbar {
+    min-height: 40px;
+    margin-bottom: 0.5em;
+  }
+
   .box-logos,
   .box-redes-sociales {
     border-top: 3px solid #36C171;
@@ -532,20 +560,6 @@ a.boton-subir i {
     padding-bottom: 1em;
   }
 
-  .logo-mobile.d-flex {
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-
-  .logo-mobile.d-flex .img-logo {
-    max-height: 41px;
-  }
-
-  .navbar {
-    min-height: 40px;
-    margin-bottom: 0.5em;
-  }
-
   .slider-pro h2.sp-layer {
     font-size: 1.2em;
   }
@@ -566,6 +580,21 @@ a.boton-subir i {
 
   .lista-servicios .servicios-item {
     width: 100%;
+  }
+
+  .lista-servicios .servicios-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .lider-drea .lider-foto {
+    margin-bottom: 15px;
+  }
+
+  .lider-drea .foto {
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
   }
 
   .footer .footer-contacto {

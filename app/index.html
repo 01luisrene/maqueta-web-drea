@@ -52,132 +52,133 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i|Open+Sans:400,400i,600,600i,700" rel="stylesheet">
     <link rel="stylesheet" href="css/screen.css">
   </head>
-  <body>
-    <header class="container">
-      <div class="row">
-        <!-- Logos -->
-        <div class="box-logos col-3 col-sm-3 col-md-3 col-lg-6 col-xl-7 d-inline-flex align-items-center">
-          <img class="hidden-md-down" src="images/logo_peru.svg" alt="">
-          <img class="hidden-md-down" src="images/logo_drea.svg" alt="">
-          <a class="img-meta-veinte" href="#">
-            <img src="images/lametaes20.png" alt="La meta es veinte">
-          </a>
-        </div>
-        <!-- Redes sociales -->
-        <div class="box-redes-sociales col-9 col-sm-9 col-md-9 col-lg-6 col-xl-5">
-          <ul class="redes-sociales list-inline list-unstyled">
-            <li class="list-inline-item">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fa fa-twitter "></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fa fa-youtube "></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fa fa-user"></i>&nbsp;Contacto</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fa fa-envelope"></i>&nbsp;Correo</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fa fa-search"></i>&nbsp;Transparencia</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Buscador -->
-        <div class="box-buscador col-sm-12 col-lg-5 offset-sm-0 offset-lg-7">
-          <form class="buscador-form" id="bloque-buscar" action="#">
-            <i class="fa fa-search js_icono_buscador" aria-hidden="true"></i>
-            <input type="text" class="form-control input-sm js_caja_buscador" placeholder="Busca noticias, trámites, servicios...">
-          </form>
-        </div>
+<body>
+<!-- HEADER -->
+<header class="container">
+  <div class="row">
+    <!-- Logos -->
+    <div class="box-logos col-3 col-sm-3 col-md-3 col-lg-6 col-xl-7 d-inline-flex align-items-center">
+      <img class="hidden-md-down" src="images/logo_peru.svg" alt="">
+      <img class="hidden-md-down" src="images/logo_drea.svg" alt="">
+      <a class="img-meta-veinte" href="#">
+        <img src="images/lametaes20.png" alt="La meta es veinte">
+      </a>
+    </div>
+    <!-- Redes sociales -->
+    <div class="box-redes-sociales col-9 col-sm-9 col-md-9 col-lg-6 col-xl-5">
+      <ul class="redes-sociales list-inline list-unstyled">
+        <li class="list-inline-item">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#"><i class="fa fa-twitter "></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#"><i class="fa fa-youtube "></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#"><i class="fa fa-user"></i>&nbsp;Contacto</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#"><i class="fa fa-envelope"></i>&nbsp;Correo</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#"><i class="fa fa-search"></i>&nbsp;Transparencia</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Buscador -->
+    <div class="box-buscador col-sm-12 col-lg-5 offset-sm-0 offset-lg-7">
+      <form class="buscador-form" id="bloque-buscar" action="#">
+        <i class="fa fa-search js_icono_buscador" aria-hidden="true"></i>
+        <input type="text" class="form-control input-sm js_caja_buscador" placeholder="Busca noticias, trámites, servicios...">
+      </form>
+    </div>
 
-        <!-- Menú web: colocar la clase fixed-top para móvil --> 
-        <nav class="navbar-drea col-sm-12 navbar navbar-toggleable-md navbar-light">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="logo-mobile d-flex align-items-center" href="/">
-            <img class="img-logo" src="images/logo_drea_white.svg" alt="Gobierno Regional de Educación  Amazonas">
-            <p class="texto-drea text-uppercase text-white">
-              Gobierno Regional de<br> Educación Amazonas
-            </p>
-          </a>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Institucional</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Tramite En Linea</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  UGEL
-                </a>
-                <span class="caret"></span>
-                <div class="dropdown-menu mega-dropdown-menu animated fadeIn" aria-labelledby="navbarDropdownMenuLink">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                    <div class="col-lg-4">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                    <div class="col-lg-4">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+    <!-- Menú web: colocar la clase fixed-top para móvil --> 
+    <nav class="navbar-drea col-sm-12 navbar navbar-toggleable-md navbar-light">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="logo-mobile d-flex align-items-center" href="/">
+        <img class="img-logo" src="images/logo_drea_white.svg" alt="Gobierno Regional de Educación  Amazonas">
+        <p class="texto-drea text-uppercase text-white">
+          Gobierno Regional de<br> Educación Amazonas
+        </p>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Institucional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tramite En Linea</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              UGEL
+            </a>
+            <span class="caret"></span>
+            <div class="dropdown-menu mega-dropdown-menu animated fadeIn" aria-labelledby="navbarDropdownMenuLink">
+              <div class="row">
+                <div class="col-lg-4">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Programas
-                </a>
-                <span class="caret"></span>
-                <div class="dropdown-menu mega-dropdown-menu animated fadeIn" aria-labelledby="navbarDropdownMenuLink">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                    <div class="col-lg-4">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                    <div class="col-lg-4">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                <div class="col-lg-4">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Convocatorias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
-              </li>
-            </ul>
-          </div>
-        </nav> <!--  Fin menú web -->     
+                <div class="col-lg-4">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Programas
+            </a>
+            <span class="caret"></span>
+            <div class="dropdown-menu mega-dropdown-menu animated fadeIn" aria-labelledby="navbarDropdownMenuLink">
+              <div class="row">
+                <div class="col-lg-4">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                <div class="col-lg-4">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                <div class="col-lg-4">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Convocatorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
       </div>
-    </header>
-    <!-- Sección: Slider principal -->
+    </nav> <!--  Fin menú web -->     
+  </div>
+</header>
+<!-- Sección: Slider principal -->
 <section class="box-slider-main container">
   <div class="row">
     <div class="col-sm-12 col-xs-12">
@@ -457,27 +458,27 @@
     </div>
 
     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
+      <a class="documentos-interes-link d-flex align-items-center" href="#">
         <i class="fa fa-file-text-o" aria-hidden="true"></i> Proyecto educativo regional
       </a>
     </div>
     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
+      <a class="documentos-interes-link d-flex align-items-center" href="#">
         <i class="fa fa-file-text-o" aria-hidden="true"></i> Documentos de gestión
       </a>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
+      <a class="documentos-interes-link d-flex align-items-center" href="#">
         <i class="fa fa-search" aria-hidden="true"></i> TUPA
       </a>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
+      <a class="documentos-interes-link d-flex align-items-center" href="#">
         <i class="fa fa-gavel" aria-hidden="true"></i> Normatividad
       </a>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 col-12">
-      <a class="documentos-interes-link d-flex flex-wrap align-items-center" href="#">
+      <a class="documentos-interes-link d-flex align-items-center" href="#">
         <i class="fa fa-phone-square" aria-hidden="true"></i> Directorio
       </a>
     </div>
@@ -487,7 +488,7 @@
 <section class="box-lideres container">
   <div class="row lider-drea">
     <div class="lider-foto col-sm-12 col-md-4 col-lg-3">
-      <img class="rounded-circle" src="images/lideres/director.jpg" alt="Dirección Regional de Educación Amazonas">
+      <img class="foto rounded-circle" src="images/lideres/director.jpg" alt="Dirección Regional de Educación Amazonas">
     </div>
     <div class="lider-contenido col-sm-12 col-md-8 col-lg-9 text-center">
       <blockquote class="lider-mensaje">
@@ -586,20 +587,18 @@
       </div>
   </div>
 </footer>
-
 <!-- Botón Subir -> top -->
 <a href="#" id="js_up" class="boton-subir" style="display: none">
   <i class="fa fa-angle-double-up" aria-hidden="true"></i>
 </a>
-
-  <!-- jQuery first, then Tether, then Bootstrap JS. -->
-  <script src="plugins-js/jquery.min.js"></script>
-  <script src="plugins-js/tether.min.js"></script>
-  <script src="plugins-js/bootstrap.min.js"></script>
-  <script src="plugins-js/jquery.sliderPro.min.js"></script>
-  <script src="plugins-js/owl.carousel.min.js"></script>
-  <script src="plugins-js/jquery.fitvids.js"></script>
-  <script src="plugins-js/jquery.bxslider.min.js"></script>
-  <script src="js/app.min.js"></script>
-  </body>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="plugins-js/jquery.min.js"></script>
+<script src="plugins-js/tether.min.js"></script>
+<script src="plugins-js/bootstrap.min.js"></script>
+<script src="plugins-js/jquery.sliderPro.min.js"></script>
+<script src="plugins-js/owl.carousel.min.js"></script>
+<script src="plugins-js/jquery.fitvids.js"></script>
+<script src="plugins-js/jquery.bxslider.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
 </html>
