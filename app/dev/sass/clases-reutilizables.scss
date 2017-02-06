@@ -1,6 +1,7 @@
 .container{
   background-color: #fff;
 }
+.box-slider-main,
 .box-servicios-actualidad,
 .box-fotos-videos,
 .box-documentos-interes,
@@ -10,6 +11,14 @@
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
 }
+.box-slider-main{
+	padding-top: 0;
+}
 .box-footer{
 	padding-bottom: 0;
+}
+//PADDING DE SECCIONES CON BG
+.documentos-interes,
+.lideres_carousel{
+	padding: 30px 15px;
 }

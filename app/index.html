@@ -64,26 +64,32 @@
         <img src="images/lametaes20.png" alt="La meta es veinte">
       </a>
     </div>
-    <!-- Redes sociales -->
-    <div class="box-redes-sociales col-9 col-sm-9 col-md-9 col-lg-6 col-xl-5">
-      <ul class="redes-sociales list-inline list-unstyled">
-        <li class="list-inline-item">
-          <a href="#"><i class="fa fa-facebook"></i></a>
+    <!-- Enlaces DREA -->
+    <div class="box-enlaces-drea col-9 col-sm-9 col-md-9 col-lg-6 col-xl-5">
+      <ul class="enlaces-drea list-inline list-unstyled d-flex justify-content-end">
+        <li class="enlaces-item">
+          <a class="d-flex align-items-center" href="#">
+            <span class="box-icono d-flex justify-content-center align-items-center">
+              <i class="fa fa-user"></i>
+            </span>
+            Contacto
+          </a>
         </li>
-        <li class="list-inline-item">
-          <a href="#"><i class="fa fa-twitter "></i></a>
+        <li class="enlaces-item">
+          <a class="d-flex align-items-center" href="#">
+            <span class="box-icono d-flex justify-content-center align-items-center">
+              <i class="fa fa-envelope"></i>
+            </span>
+            Correo
+          </a>
         </li>
-        <li class="list-inline-item">
-          <a href="#"><i class="fa fa-youtube "></i></a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#"><i class="fa fa-user"></i>&nbsp;Contacto</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#"><i class="fa fa-envelope"></i>&nbsp;Correo</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#"><i class="fa fa-search"></i>&nbsp;Transparencia</a>
+        <li class="enlaces-item">
+          <a class="d-flex align-items-center" href="#">
+            <span class="box-icono d-flex justify-content-center align-items-center">
+              <i class="fa fa-search"></i>
+            </span>
+            Transparencia
+          </a>
         </li>
       </ul>
     </div>
@@ -328,7 +334,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-lg-6 actualidad">
+    <div class="col-lg-6 box-actualidad">
       <div class="actualidad-cabecera">
         <h2 class="titulo">Actualidad</h2>
         <a class="actualidad-ver-todos" href="#">Ver todos</a>
@@ -409,22 +415,22 @@
     <div class="col-lg-6 slider-fotos">
       <!-- Slider de imágenes -->
       <div class="owl-carousel owl-theme js_small_carousel">
-        <div>
+        <div class="item">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
-        <div>
+        <div class="item">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
-        <div>
+        <div class="item">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
           </a>
         </div>
-        <div>
+        <div class="item">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
           </a>
@@ -484,18 +490,33 @@
     </div>
   </div>
 </section>
-<!-- Sección: Director DREA -->
+<!-- Sección: Lideres DREA -->
 <section class="box-lideres container">
-  <div class="row lider-drea">
-    <div class="lider-foto col-sm-12 col-md-4 col-lg-3">
-      <img class="foto rounded-circle" src="images/lideres/director.jpg" alt="Dirección Regional de Educación Amazonas">
+  <!-- Slider de lideres -->
+  <div class="owl-carousel owl-theme lideres_carousel js_lideres_carousel">
+    <div class="row lider-drea">
+      <div class="lider-foto col-sm-12 col-md-4 col-lg-3">
+        <img class="foto rounded-circle" src="images/lideres/director.jpg" alt="Dirección Regional de Educación Amazonas">
+      </div>
+      <div class="lider-contenido col-sm-12 col-md-8 col-lg-9 text-center">
+        <blockquote class="lider-mensaje">
+          <p>Uno de los desafíos fundamentales para el futuro de nuestro país, es el desafío de la educación.  Es en el campo educativo donde se configura el futuro y el bienestar de nuestros actuales niños y niñas, así como de las próximas generaciones.</p>
+        </blockquote>
+        <h4 class="lider-nombre">Edgar Moises Julca Chuquista <br><small class="text-muted">Director Regional</small></h4>
+        <a class="btn btn-success" href="#">Ver Agenda</a>
+      </div>
     </div>
-    <div class="lider-contenido col-sm-12 col-md-8 col-lg-9 text-center">
-      <blockquote class="lider-mensaje">
-        <p>Uno de los desafíos fundamentales para el futuro de nuestro país, es el desafío de la educación.  Es en el campo educativo donde se configura el futuro y el bienestar de nuestros actuales niños y niñas, así como de las próximas generaciones.</p>
-      </blockquote>
-      <h4 class="lider-nombre">Edgar Moises Julca Chuquista <br><small class="text-muted">Director Regional</small></h4>
-      <a class="btn btn-success" href="#">Ver Agenda</a>
+    <div class="row lider-drea">
+      <div class="lider-foto col-sm-12 col-md-4 col-lg-3">
+        <img class="foto rounded-circle" src="images/lideres/sub_director.jpg" alt="Dirección Regional de Educación Amazonas">
+      </div>
+      <div class="lider-contenido col-sm-12 col-md-8 col-lg-9 text-center">
+        <blockquote class="lider-mensaje">
+          <p>Uno de los desafíos fundamentales para el futuro de nuestro país, es el desafío de la educación.  Es en el campo educativo donde se configura el futuro y el bienestar de nuestros actuales niños y niñas, así como de las próximas generaciones.</p>
+        </blockquote>
+        <h4 class="lider-nombre">Edgar Moises Julca Chuquista <br><small class="text-muted">Director Regional</small></h4>
+        <a class="btn btn-success" href="#">Ver Agenda</a>
+      </div>
     </div>
   </div>
 </section>
@@ -506,48 +527,68 @@
     <h2 class="titulo">Enlaces de Interés</h2>
       <div class="js_enlaces_interes owl-carousel owl-theme">
         <div>
-          <a href="#">
-            <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
+          <a href="http://escale.minedu.gob.pe/inicio" target="_blank">
+            <img src="images/slider_enlaces_interes/escale.png" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/minedu.jpg" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="#" target="_blank">
             <img src="images/slider_enlaces_interes/peru_educa.jpg" alt="">
           </a>
         </div>
       </div>
     </div>
   </div>
+</section>
+<!-- Sección: redes sociales-->
+<section class="box-redes-sociales js_box_redes_sociales">
+  <ul class="redes-sociales list-unstyled">
+    <li class="redes-item">
+      <a class="redes-link d-flex justify-content-center align-items-center" href="#">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="redes-item">
+      <a class="redes-link d-flex justify-content-center align-items-center" href="#">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="redes-item">
+      <a class="redes-link d-flex justify-content-center align-items-center" href="#">
+        <i class="fa fa-youtube" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
 </section>
 <!-- FOOTER -->
 <footer class="box-footer container">
@@ -571,9 +612,24 @@
         </p>
       </div>
       <div class="footer-drea col-md-6 col-lg-6 ">
-        <a class="redes-sociales" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a class="redes-sociales" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a class="redes-sociales" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <!-- Footer: redes sociales -->
+        <ul class="redes-sociales list-unstyled">
+          <li class="list-inline-item">
+            <a class="redes-link facebook d-flex justify-content-center align-items-center" href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="redes-link twitter d-flex justify-content-center align-items-center" href="#">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="redes-link youtube d-flex justify-content-center align-items-center" href="#">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
         <p class="footer-libro">
           <a href="#" title="Libro de reclamaciones">
             <i class="fa fa-book" aria-hidden="true"></i> Libro de reclamaciones
@@ -588,8 +644,10 @@
   </div>
 </footer>
 <!-- Botón Subir -> top -->
-<a href="#" id="js_up" class="boton-subir" style="display: none">
-  <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+<a href="#" id="js_up" class="up" style="display: none">
+  <div class="box-up d-flex justify-content-center align-items-center">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </div>
 </a>
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
 <script src="plugins-js/jquery.min.js"></script>

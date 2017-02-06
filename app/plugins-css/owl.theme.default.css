@@ -46,7 +46,7 @@
     cursor: default; }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 10px; }
+  margin-top: 15px; }
 
 .owl-theme .owl-dots {
   text-align: center;
@@ -56,13 +56,14 @@
     zoom: 1;
     *display: inline; }
     .owl-theme .owl-dots .owl-dot span {
-      width: 10px;
-      height: 10px;
+      width: 13px;
+      height: 13px;
       margin: 5px 7px;
-      background: #D6D6D6;
+      background: #6AABEE;
       display: block;
       -webkit-backface-visibility: visible;
       transition: opacity 200ms ease;
       border-radius: 30px; }
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #869791; }
+      background: #6AABEE;
+      border: thin solid #264B72; }

@@ -4,6 +4,7 @@ body{
 	font-size: $font-size-base;
 }
 h1,h2,h3,h4,h5,h6{
+	color: $titulo-color;
 	font-family: $font-family-titulos;
 }
 img{

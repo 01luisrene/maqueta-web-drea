@@ -8,11 +8,11 @@
 	&::before{
 		background-color: $titulo-subrayado-color;
 		content: "";
-		margin-left: -10%;
+		margin-left: -5%;
 		height: 5px;
-		width: 20%;
+		width: 10%;
 		position: absolute;
-		bottom: -5px;
+		bottom: -7px;
 		left: 50%;
 		z-index: 100;
 	}
@@ -100,15 +100,25 @@
 	}
 }
 .actualidad{
+	margin-bottom: 1em;
+	&:last-child{
+		margin-bottom: 0;
+	}
 	.image{
 		background-size: cover;
 		background-position: center center;
 		height: 145px;
 		width: 30%;
+		@media (max-width: 575px) {
+			width: 35%;
+		}
 	}
 	.actualidad-contenido{
 		margin-left: 2%;
 		width: 68%;
+		@media (max-width: 575px) {
+			width: 63%;
+		}
 	}
 	.actualidad-vinculo{
 		color: $actualidad-titulo-color;
@@ -147,7 +157,9 @@
 }
 //===============SLIDER FOTOS=====================
 .slider-fotos{
-	margin-bottom: 2em;
+	@media (max-width: 991px) {
+		margin-bottom: 2em;
+	}
 }
 
 //===============SLIDER VIDEOS======================
@@ -158,10 +170,8 @@
 }
 
 //===============DOCUMENTOS DE INTERES=====================
-.box-documentos-interes{
-	background-color: #91DBA7;
-}
 .documentos-interes{
+	background-color: #91DBA7;
 	> div + div{
 		@media (max-width: 1199px) {
 			margin-bottom: 1.5em;
@@ -188,6 +198,10 @@
 }
 //===============LIDER DREA=====================
 .box-lideres{
+	padding-left: 0;
+	padding-right: 0;
+}
+.lideres_carousel{
 	background-color: #ECF0F1;
 }
 .lider-drea{
@@ -198,14 +212,52 @@
 	}
 	.foto{
 		border: 5px solid $color-azul;
+		margin:  auto;
+		height: 200px !important;
+		width: 200px !important;
 		@media (max-width: 767px) {
 			display: block;
-			margin:  auto;
-			height: 150px;
-			width: 150px;
+			height: 150px !important;
+			width: 150px !important;
 		}
 	}
 	.lider-nombre{
 		margin-bottom: 15px;
+	}
+}
+//===============REDES SOCIALES=====================
+.box-redes-sociales{
+	width: 50px;
+	position: fixed;
+	right: 1px;
+	top: 50%;
+	z-index: 9999999999;
+}
+.redes-sociales{
+	margin-bottom: 0;
+	.redes-item{
+		overflow: hidden;
+		border-bottom: thin solid #fff;
+		&:first-child{
+			border-radius: 12px 0 0 0;
+		}
+		&:last-child{
+			border-radius: 0 0 0 12px;
+			border-bottom: 0;
+		}
+	}
+	.redes-link{
+		background-color: #6797F8;
+		text-decoration: none;
+		height: 50px;
+		width: 50px;
+	}
+	.fa{
+		color: #fff;
+		font-size: 2em;
+		transition: all 0.300s linear;
+		&:hover{
+			color: #3A3737;
+		}
 	}
 }

@@ -10,10 +10,10 @@
 		}
 	}
 }
-.box-redes-sociales{
+.box-enlaces-drea{
 	margin-top: 0.5em;
 }
-.box-logos, .box-redes-sociales{
+.box-logos, .box-enlaces-drea{
 	@media (max-width: 991px) {
 		border-top: 3px solid $theme-color;
 		margin-top: 0;
@@ -34,59 +34,35 @@
 	}
 }
 //Contenedor redes sociales
-.redes-sociales{
+.enlaces-drea{
 	margin-bottom: 0.5em;
 	@media (max-width: 991px) {
 		margin-bottom: 0;
 		padding-top: 0.5em;
 	}
-	li{
-	 	box-sizing: border-box;
-	 	@media (max-width: 991px) {
-	 		&:nth-child(1), &:nth-child(2), &:nth-child(3){
-				display: none;
-	 		}
-	 	}
-	 	a{
-	 		color: $header-redes-link-color;
-  		text-decoration: none;
-	 	}
-	 	.fa {
-		  background-color: $header-redes-link-color;
-		  border-radius: 50%;
-		  border: thin solid transparent;
-		  color: #fff;
-		  text-align: center;
-		  font-size: 1.2rem;
-		  transition: all 0.500s ease;
-		  height: 30px;
-		  width: 30px;
-		  padding-top: 5px;
-		  &.fa-facebook:hover{
-        background-color: #fff;
-		  	border: thin solid $header-redes-facebook-bg;
-        color: $header-redes-facebook-bg;
-      }
-      &.fa-twitter:hover{
-        background-color: #fff;
-      	border: thin solid $header-redes-twitter-bg;
-        color: $header-redes-twitter-bg;
-      }
-      &.fa-youtube:hover{
-        background-color: #fff;
-      	border: thin solid $header-redes-youtube-bg;
-        color: $header-redes-youtube-bg;
-      }
+	.enlaces-item{
+		box-sizing: border-box;
+		margin-left: 5px;
+		&:first-child{
+			margin-left: 0;
 		}
-		.fa-facebook {
-		  background-color: $header-redes-facebook-bg; 
-		}
-		.fa-twitter {
-  		background-color: $header-redes-twitter-bg;
-  	}
-  	.fa-youtube {
-  		background-color: $header-redes-youtube-bg; 
-  	}
+	}
+ 	a{
+ 		color: $header-redes-link-color;
+		text-decoration: none;
+ 	}
+ 	.box-icono{
+ 		background-color: $header-redes-link-color;
+ 		border: thin solid transparent;
+	  border-radius: 50%;
+	  color: #fff;
+	  transition: all 0.500s ease;
+	  margin-right: 5px;
+ 		height: 30px;
+	  width: 30px;
+ 	}
+ 	.fa {
+	  font-size: 1em;
 	}
 }
 //Contenedor de buscador

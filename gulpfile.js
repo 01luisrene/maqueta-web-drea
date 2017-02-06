@@ -31,7 +31,7 @@ gulp.task('screen', function(){
   .pipe(sourceMaps.init())
   .pipe(postCss(processors))
   .pipe(gcmq())
-  //.pipe(cleanCss())
+  .pipe(cleanCss())
   .pipe(rename('screen.css'))
   .pipe(sourceMaps.write('.'))
   .pipe(gulp.dest('./app/css'))
@@ -41,10 +41,10 @@ gulp.task('screen', function(){
 //Comprimir archivo app.js
 gulp.task('js', function () {
   return gulp.src('./app/dev/js/*.js')
-    //.pipe(uglify())
-    .pipe(rename('app.min.js'))
-    .pipe(gulp.dest('./app/js/'))
-    .pipe(notify('Tarea js terminada!'));
+  .pipe(uglify())
+  .pipe(rename('app.min.js'))
+  .pipe(gulp.dest('./app/js/'))
+  .pipe(notify('Tarea js terminada!'));
 });
 
 gulp.task('watch', function () {
