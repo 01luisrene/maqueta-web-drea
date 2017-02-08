@@ -48,6 +48,9 @@ body.nav-opened.window-resize .nav-mobile{
         -ms-transform: translate3D(0, 0, 0);
             transform: translate3D(0, 0, 0);
 }
+body.nav-opened.window-resize .nav-cover{
+	right: 0;
+}
 body.nav-opened .nav-cover {
     position: fixed;
     top: 0;
