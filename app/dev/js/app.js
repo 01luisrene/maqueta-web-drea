@@ -12,6 +12,25 @@ var $drea_js = (function ($) {
       $('.js_icono_buscador').removeAttr('style');
     });
   },
+  menu_mobile = function(){
+    $(".nav-icono,.nav-cover,.nav-cerrar").on("click", function(e){
+        e.preventDefault();
+        $("body").toggleClass("nav-opened nav-closed");
+    });
+    $('.nav-mobile .nav-main').removeClass('hidden-md-down d-flex').addClass('hidden-lg-up');
+    $(window).resize(function(event) {
+      var w = $( this ).width();
+      if(w > 991){
+        $('.nav-mobile').css({
+          display: 'none'
+        });
+        $('body').addClass('window-resize');
+      }else{
+        $('.nav-mobile').removeAttr('style');
+        $('body').removeClass('window-resize');
+      }
+    });
+  },
   //=====================SLIDER MAIN==================
   slider_main = function(){
     $( '.js_slider_main' ).sliderPro({
@@ -125,7 +144,7 @@ var $drea_js = (function ($) {
   redes_sociales = function(){
     var altura_redes_sociales = $('.js_box_redes_sociales').height();
     $('.js_box_redes_sociales').css({
-      marginTop: -(altura_redes_sociales/2)
+      marginTop: -(altura_redes_sociales / 2)
     });
   },
   botonUp = function(){
@@ -144,8 +163,13 @@ var $drea_js = (function ($) {
       return false;
     });
   },
+  //===  WOW ANIMATION ====
+  animate_wow = function(){
+    new WOW().init();
+  },
   init = function () {
     buscador();
+    menu_mobile();
     slider_main();
     small_carousel();
     videos_carousel();
@@ -153,6 +177,7 @@ var $drea_js = (function ($) {
     enlaces_interes_carousel();
     redes_sociales();
     botonUp();
+    animate_wow();
   };
 
   return {

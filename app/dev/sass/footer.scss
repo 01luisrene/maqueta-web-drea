@@ -3,17 +3,25 @@
   color: #fff;
   padding-top: 15px;
   padding-bottom: 15px;
-  //FOOTER RESET
-  p{
-    margin: 0;
-    line-height: 25px;
-    small{
-      font-size: 95%;
-      margin-bottom: 0.5em;
+  > div{
+    @media (max-width: 767px) {
+      border-top: thin dotted #fff;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      &:first-child{
+        border-top:0;
+        padding-top: 0;
+      }
       &:last-child{
-        margin-bottom: 0;
+        padding-bottom: 0;
       }
     }
+  }
+  div small{
+    line-height: 20px;
+  }
+  hr{
+    border-top: thin solid #fff;
   }
   .footer-contacto{
     @media (max-width: 767px) {
@@ -26,9 +34,6 @@
   }
   //====================REDES SOCIALES FOOTER=======================//
   .redes-sociales{
-    &:nth-child(3){
-      margin-right:0;
-    }
     .redes-link{
       border-radius: 50%;
       color: #fff;
@@ -60,12 +65,16 @@
       font-size: 1.2em;
     }
   }
+
+  .meta-img{
+    margin-left: -30px;
+    height: 70px;
+  }
   //CONTENEDOR DREA
-  .footer-drea{
+  .drea{
     text-align: center;
-    @media (max-width: 767px) {
-      border-top: thin dotted #fff;
-      padding-top: 1em;
+    p{
+      margin-bottom: 0;
     }
   }
   //FOOTER LIBRO
@@ -103,10 +112,19 @@
     }
   }
 }
+.dev{
+  background-color: #333;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  a{
+    color: #fff;
+    font-size: 12px;
+  }
+}
 //=====================================BOTÓN SUBIR=========================//
 a.up{
-  background: lighten($color-azul, 5%);
-  border: 2px solid darken($color-azul, 3%);
+  background: #EF6752;
+  border: 2px solid darken(#EF6752, 3%);
   border-radius: 5px;
   color: #fff;
   text-decoration: none;
@@ -118,7 +136,7 @@ a.up{
     outline: none;
   }
   &:hover{
-    background: lighten($color-azul, 2%);
+    background: lighten(#EF6752, 3%);
   }
   i{
     font-size: 1.5em;

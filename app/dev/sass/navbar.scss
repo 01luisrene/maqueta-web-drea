@@ -1,26 +1,279 @@
 //MENU
-.logo-mobile.d-flex{
-	display: none !important;
-	text-decoration: none;
-	@media (max-width: 991px) {
-		display: flex !important;
-	}
-	.img-logo{
-		@media (max-width: 991px) {
-			max-height: 41px;
-		}
-	}
-	.texto-drea{
-		font-size: 13px;
-		line-height: 16px;
-		margin-bottom: 0;
-	}
+.site-container {
+    position: relative;
+    z-index: 10;
+    min-height: 100%;
+    -webkit-transition: -webkit-transform 0.5s ease;
+            transition: transform 0.5s ease;
 }
-.navbar{
-	background-color: $theme-color;
-	margin-bottom: 1em;
-	@media (max-width: 991px) {
-		min-height: 40px;
-		margin-bottom: 0.5em;
-	}
+body.nav-opened .site-container {
+    overflow-x: hidden;
+    -webkit-transform: translate3D(-320px, 0, 0);
+        -ms-transform: translate3D(-320px, 0, 0);
+            transform: translate3D(-320px, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+}
+body.nav-opened .nav-mobile {
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.3s ease,
+                        opacity 0s ease 0s;
+            transition: transform 0.3s ease,
+                        opacity 0s ease 0s;
+    -webkit-transform: translate3D(0, 0, 0);
+        -ms-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+}
+body.nav-closed .nav-mobile{
+    -webkit-transform: translate3D(320px, 0, 0);
+        -ms-transform: translate3D(320px, 0, 0);
+            transform: translate3D(320px, 0, 0);
+}
+//resize
+body.nav-opened.window-resize .site-container {
+    overflow-x: hidden;
+    -webkit-transform: translate3D(0, 0, 0);
+        -ms-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+}
+body.nav-opened.window-resize .nav-mobile{
+  opacity: 1;
+    -webkit-transition: -webkit-transform 0.3s ease,
+                        opacity 0s ease 0s;
+            transition: transform 0.3s ease,
+                        opacity 0s ease 0s;
+    -webkit-transform: translate3D(0, 0, 0);
+        -ms-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+}
+body.nav-opened .nav-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 320px;
+    bottom: 0;
+    z-index: 200;
+}
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 320px;
+    opacity: 0;
+    margin-bottom: 0;
+    text-align: left;
+    overflow-y: auto;
+    -webkit-transition: -webkit-transform 0.5s ease,
+                        opacity 0.3s ease 0.7s;
+            transition: transform 0.5s ease,
+                        opacity 0.3s ease 0.7s;
+}
+//MENU DESKTOP
+.nav-desktop{
+  background-color: $menu-bg;
+  border-bottom: $menu-border-height solid $menu-border-bottom-color;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 0.7em 1em;
+  position: relative;
+  height: $menu-height; //58px
+  max-width: 100%;
+  width: 100%;
+  .logo-drea{
+    max-height: 45px;
+  }
+}
+.nav-main{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  .nav-item, .nav-link{
+    height: $menu-height - $menu-border-height;
+  }
+  .nav-item{
+    &.nav-dropdown:hover .mega-dropdown,
+    &.nav-dropdown:hover .caret{
+      display: block;
+    }
+  }
+  .nav-link{
+    color: #fff;
+    text-align: center;
+  }
+}
+//Icono apuntando al bloque mega-dropdown
+.caret{
+  display: none;
+  position: relative;
+  height: 0;
+  width: 100%;
+  &::before{
+    content: "";
+    border-style: solid;
+    border-color: $menu-border-bottom-color transparent transparent transparent;
+    border-width: 10px 10px;
+    height: 0;
+    margin-left: -10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    z-index: $menu-z-index;
+  }
+}
+//Contenedor de los submenus
+.mega-dropdown{
+  display: none;
+  border-top: ($menu-border-height * 3) solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $menu-height - ($menu-border-height);
+  width: 100%;
+  z-index: $menu-z-index;
+}
+.mega-dropdown-item{
+  margin-left: 0;
+  margin-right: 0;
+  padding:15px 0;
+  > div{
+    border-right: thin dashed $menu-border-color;
+    &:last-child{
+      border-right: 0;
+    }
+  }
+  h3{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 21px;
+  }
+}
+//Links de menu-dropdown
+.mega-dropdown-link{
+  padding: 5px;
+  border-bottom: thin dotted $menu-border-color;
+  display: block;
+  color: #fff;
+  &:last-child{
+    border-bottom: 0;
+  }
+  &:hover{
+    color: #403F3F;
+  }
+}
+//Fondos de sub menus
+.dropdown-bg{
+  background-color: $submenu-bg;
+}
+
+
+//MENUU MOBILE
+.nav-mobile{
+  background-color: $menu-bg;
+  overflow-y: scroll;
+  .logo-drea{
+    display: block;
+    max-width: 230px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-main{
+    .nav-item, .nav-link{
+      height: auto;
+    }
+    .nav-item{
+      &.nav-dropdown:hover .caret{
+        display: none;
+      }
+    }
+  }
+ .mega-dropdown{
+    position: initial;
+    border-top: 0;
+ }
+ .mega-dropdown-item{
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  > div{
+    border-right: 0;
+    border-bottom: 1px solid $menu-border-color;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &:last-child{
+      border-bottom: 0;
+      &::after{
+        display: none;
+      }
+    }
+    &::after{
+      display: block;
+      content: "";
+      width: 7px;
+      height: 7px;
+      border: $menu-border-color 1px solid;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -5px;
+      background: $submenu-bg;
+      border-radius: 100%;
+      box-shadow: $submenu-bg 0 0 0 5px;
+    }
+  }
+  h3{
+    margin: 10px 0;
+    font-size: 18px;
+  }
+ }
+ .mega-dropdown-link{
+    padding: 10px 5px;
+  }
+}
+//Icono Menu
+.nav-icono{
+  background: #3DB160;
+  border: thin solid #C0BCBC;
+  border-radius: 3px;
+  height: 40px;
+  width: 47px;
+  span{
+    display: block;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    height: 4px;
+    width: 30px;
+    &::before, &::after{
+      content: "";
+      background: #fff;
+      border-radius: 2px;
+      height: 4px;
+      width: 30px;
+      position: absolute;
+    }
+    &::before{
+      top: -10px;
+    }
+    &::after{
+      bottom: -10px;
+    }
+  }
+}
+//Icono cerrar
+.nav-cerrar{
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: -5px;
 }

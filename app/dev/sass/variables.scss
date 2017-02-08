@@ -10,16 +10,26 @@ $font-family-titulos: 'Open Sans', sans-serif;
 $font-family-contenido: 'Lato', sans-serif;
 $font-size-base: 15px;
 
-$theme-color: #36C171;
+$theme-color: #0A872F;
 
 //HEADER
 $header-redes-link-color: #009933;
 
 //MENU
-$menu-bg: #36C171;
+$menu-bg: $theme-color;
+$menu-height: 62px;
+$menu-border-height: 4px;
 $menu-border-bottom-color: #85C226;
+
+$menu-border-bottom-color: #3DB160;
 $menu-link-color: #fff;
 $menu-link-color-hover: #1E1C1C;
+$menu-z-index: 100;
+//MENU MOBILE
+$submenu-bg: #1AA644;
+$menu-border-color: #5A0029;
+
+
 
 //LAYOUT
 $titulo-color: #18814B;
