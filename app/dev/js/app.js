@@ -17,7 +17,11 @@ var $drea_js = (function ($) {
         e.preventDefault();
         $("body").toggleClass("nav-opened nav-closed");
     });
+
+    //Sirve para usar la misma plantilla de menu tanto en Desktop & mobile
     $('.nav-mobile .nav-main').removeClass('hidden-md-down d-flex').addClass('hidden-lg-up');
+
+    //Función para mostrar efectos del menú solo en mobile
     $(window).resize(function(event) {
       var w = $( this ).width();
       if(w > 991){
@@ -30,11 +34,24 @@ var $drea_js = (function ($) {
         $('body').removeClass('window-resize');
       }
     });
+    //Coloca  fixed al menu 
+    var ancho = $( window ).width();
+    var menu_offset = $('.nav-desktop').offset();
+    $(window).on("scroll", function() {
+      if(ancho > 991){
+        if($(window).scrollTop() > menu_offset.top) {
+          $('.nav-desktop').addClass('fixed');
+        }else{
+          $('.nav-desktop').removeClass('fixed');
+        }
+      }
+    });
+
   },
   //=====================SLIDER MAIN==================
   slider_main = function(){
     $( '.js_slider_main' ).sliderPro({
-      width: 1110,
+      width: 1140,
       height: 325,
       fullScreen: true,
       arrows: true,
@@ -58,8 +75,8 @@ var $drea_js = (function ($) {
       }
     });
   },
-  small_carousel = function(){
-    $(".js_small_carousel").owlCarousel({
+  fotos_carousel = function(){
+    $(".js_fotos_carousel").owlCarousel({
         loop:true,
         margin:10,
         autoplay: true,
@@ -171,7 +188,7 @@ var $drea_js = (function ($) {
     buscador();
     menu_mobile();
     slider_main();
-    small_carousel();
+    fotos_carousel();
     videos_carousel();
     lideres_carousel();
     enlaces_interes_carousel();
