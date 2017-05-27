@@ -24,6 +24,8 @@ $menu-border-bottom-color: #85C226;
 $menu-link-color: #fff;
 $menu-link-color-hover: #1E1C1C;
 $menu-z-index: 100;
+$menu-sub-menu-ancho: 320px;
+
 //MENU MOBILE
 $submenu-bg: #1AA644;
 $menu-border-color: #5A0029;
@@ -54,6 +56,18 @@ $redes-facebook-bg: #336699;
 $redes-twitter-bg: #0099CC;
 $redes-youtube-bg: #CC3333;
 $redes-google-plus: #DB4437;
+
+//GALERIA DE FOTOS
+$overlay_dark:                          rgba(0, 0, 0, .6);              
+$overlay_dark_fallback:                 #333;                           
+$overlay_colored:                       rgba(26, 74, 114, .6);         
+$overlay_colored_fallback:              #1a4a72;
+
+@mixin transform($property: none) {
+//  none | <transform-function>
+  transform: $property;
+}
+
 
 //FOOTER
 $bg-footer: #666666;

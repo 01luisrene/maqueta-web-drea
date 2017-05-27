@@ -4,7 +4,6 @@
   border-bottom: $menu-border-height solid $menu-border-bottom-color;
   box-sizing: border-box;
   padding: 0.7em 1em;
-  position: relative;
   height: $menu-height; //58px
   max-width: 100%;
   width: 100%;
@@ -97,32 +96,24 @@
     z-index: $menu-z-index;
   }
 }
-//Contenedor de los submenus
+/*Contenedor de los submenus*/
 .mega-dropdown{
   display: none;
   border-top: ($menu-border-height * 2.5) solid transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: $menu-height - ($menu-border-height);
-  width: 100%;
+  position: relative;
+  width: auto;
   z-index: $menu-z-index;
 }
 .mega-dropdown-item{
   margin-left: 0;
   margin-right: 0;
   padding:15px 0 10px 0;
-  > div{
-    border-right: thin dashed $menu-border-color;
-    &:last-child{
-      border-right: 0;
-    }
-  }
-  h3{
-    margin: 10px 0;
-    color: #fff;
-    font-size: 21px;
-  }
+  /*Esto es la mitad del ancho*/
+  margin-left: -($menu-sub-menu-ancho / 2);
+  position: absolute;
+  left: 50%;
+  /*Modificar ancho si es necesario*/
+  width: $menu-sub-menu-ancho;
 }
 //Links de menu-dropdown
 .mega-dropdown-link{
@@ -134,7 +125,7 @@
     border-bottom: 0;
   }
   &:hover{
-    color: #403F3F;
+    color: $menu-link-color-hover;
   }
 }
 //Fondos de sub menus
@@ -143,7 +134,7 @@
 }
 
 
-//MENUU MOBILE
+//MENU MOBILE
 body{
   &.nav-opened{
     .site-container {
@@ -206,6 +197,7 @@ body{
 }
 
 .nav-mobile {
+  background-color: $menu-bg;
   position: fixed;
   top: 0;
   right: 0;
@@ -215,15 +207,10 @@ body{
   opacity: 0;
   margin-bottom: 0;
   text-align: left;
-  overflow-y: auto;
   -webkit-transition: -webkit-transform 0.5s ease,
   opacity 0.3s ease 0.7s;
   transition: transform 0.5s ease,
   opacity 0.3s ease 0.7s;
-}
-.nav-mobile{
-  background-color: $menu-bg;
-  overflow-y: scroll;
   .logo-drea{
     display: block;
     max-width: 230px;
@@ -233,13 +220,13 @@ body{
     margin-right: auto;
   }
   .nav-main{
+    border-top: 2px solid $menu-border-bottom-color;
+    margin-top: 1em;
+    padding-top: 1em;
     .nav-item, .nav-link{
       height: auto;
     }
     .nav-item{
-      &.nav-dropdown:hover .caret{
-        display: none;
-      }
       &:hover{
         .nav-link{
           &::before{
@@ -249,11 +236,25 @@ body{
           }
         }
       }
-
+      //Link activo{
+      &.active{
+        .nav-link{
+          //Color del link activo
+          color: $menu-link-color-hover;
+          &::before{
+            content: "";
+            height: 0;
+            width: 0;
+            position: initial;
+          }
+        }
+      }
+      &.nav-dropdown:hover .caret{
+        display: none;
+      }
     }
   }
  .mega-dropdown{
-    position: initial;
     border-top: 0;
  }
  .mega-dropdown-item{
@@ -261,6 +262,10 @@ body{
   padding-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: 0;
+  position: initial;
+  left: 0;
+  width: 100%;
   > div{
     border-right: 0;
     border-bottom: 1px solid $menu-border-color;
@@ -329,11 +334,17 @@ body{
 }
 //Icono cerrar
 .nav-cerrar{
+  background: $menu-border-bottom-color;
+  border: thin solid $menu-bg;
+  border-radius: 3px;
+  box-shadow:         3px 3px 0px 0px rgba(50, 50, 50, 1);
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
+  padding: 5px 15px;
   position: absolute;
-  right: 10px;
-  top: -5px;
+  left: -20px;
+  top: 15px;
+  z-index: $menu-z-index + 2;
   &:hover{
     color: #fff;
   }

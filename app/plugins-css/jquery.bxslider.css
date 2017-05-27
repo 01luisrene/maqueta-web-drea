@@ -30,10 +30,10 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	-moz-box-shadow: 0 0 5px #ccc;
+	/*-moz-box-shadow: 0 0 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
+	border:  5px solid #fff;*/
 	left: -5px;
 	background: #fff;
 	
@@ -103,12 +103,19 @@
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
+.bx-wrapper:hover .bx-prev,
+.bx-wrapper:hover .bx-next{
+	display: block !important;
+}
+
 .bx-wrapper .bx-prev {
+	display: none;
 	left: 10px;
 	background: url(images/controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
+	display: none;
 	right: 10px;
 	background: url(images/controls.png) no-repeat -43px -32px;
 }

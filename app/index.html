@@ -54,18 +54,22 @@
     <link rel="stylesheet" href="css/screen.css">
   </head>
 <body class="nav-closed">
-  <!-- Menú web mobile --> 
+  <!-- Menú web mobile--> 
   <nav class="nav-mobile">
-    <a class="nav-cerrar" href="#"><i class="fa fa-close"></i></a>
+    <!--Icono cerrar menu mobile-->
+    <a class="nav-cerrar" href="#">
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
     <img class="hidden-lg-up logo-drea" src="images/logo_drea_white.svg">
+    <!-- Recuerda que esta lista ul debe ser la misma tanto para mobile & desktop puedes usar una sola platilla y solo incluirla en ambos contenedores tag -->
     <ul class="nav-main hidden-md-down list-unstyled d-flex">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link d-flex align-items-center" href="#">
               Inicio
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center" href="#">
+            <a class="nav-link d-flex align-items-center" href="pagina-interna.html">
               Institucional
             </a>
           </li>
@@ -83,8 +87,7 @@
 
             <div class="mega-dropdown  animated fadeIn">
                 <div class="row mega-dropdown-item dropdown-bg">
-                  <div class="col-lg-3">
-                    <h3 class="titulo">Titulo 1</h3>
+                  <div class="col-lg-12">
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
@@ -95,45 +98,6 @@
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
-                  </div>
-                  <div class="col-lg-3">
-                  <h3 class="titulo">Titulo 2</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
-                  </div>
-                  <div class="col-lg-3">
-                  <h3 class="titulo">Titulo 3</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
-                  </div>
-                  <div class="col-lg-3">
-                    <h3 class="titulo">Titulo 4</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
                   </div>
                 </div>
             </div>
@@ -147,8 +111,7 @@
 
             <div class="mega-dropdown  animated fadeIn">
                 <div class="row mega-dropdown-item dropdown-bg">
-                  <div class="col-lg-6">
-                    <h3 class="titulo">Titulo 5</h3>
+                  <div class="col-lg-12">
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
@@ -159,19 +122,6 @@
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
-                  </div>
-                  <div class="col-lg-6">
-                    <h3 class="titulo">Titulo 6</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
                   </div>
                 </div>
             </div>
@@ -186,7 +136,7 @@
               Contacto
             </a>
           </li>
-    </ul>
+      </ul>
   </nav> 
   <!--  Fin menú web -->
 
@@ -201,7 +151,7 @@
       <img class="hidden-md-down" src="images/logo_peru.svg" alt="">
       <img class="hidden-md-down" src="images/logo_drea.svg" alt="">
       <a class="img-meta-veinte" href="#">
-        <img src="images/lametaes20.png" alt="La meta es veinte">
+        <img src="images/lametaes20.png" alt="La meta es veinte" width="135" height="55">
       </a>
     </div>
     <!-- Enlaces DREA -->
@@ -269,8 +219,7 @@
 
             <div class="mega-dropdown  animated fadeIn">
                 <div class="row mega-dropdown-item dropdown-bg">
-                  <div class="col-lg-3">
-                    <h3 class="titulo">Titulo 1</h3>
+                  <div class="col-lg-12">
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
@@ -281,45 +230,6 @@
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
-                  </div>
-                  <div class="col-lg-3">
-                  <h3 class="titulo">Titulo 2</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
-                  </div>
-                  <div class="col-lg-3">
-                  <h3 class="titulo">Titulo 3</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
-                  </div>
-                  <div class="col-lg-3">
-                    <h3 class="titulo">Titulo 4</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
                   </div>
                 </div>
             </div>
@@ -333,8 +243,7 @@
 
             <div class="mega-dropdown  animated fadeIn">
                 <div class="row mega-dropdown-item dropdown-bg">
-                  <div class="col-lg-6">
-                    <h3 class="titulo">Titulo 5</h3>
+                  <div class="col-lg-12">
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
@@ -345,19 +254,6 @@
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
                     <a href="#" class="mega-dropdown-link">link prueva</a>
-                  </div>
-                  <div class="col-lg-6">
-                    <h3 class="titulo">Titulo 6</h3>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 1</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 2</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 3</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 4</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 5</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 6</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 7</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 8</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 9</a>
-                    <a href="#" class="mega-dropdown-link">vinculo prueva 10</a>
                   </div>
                 </div>
             </div>
@@ -604,35 +500,61 @@
 <section class="box-fotos-videos container">
   <div class="row">
     <div class="col-lg-6 slider-fotos">
+    	<h2 class="titulo">Galería de imágenes</h2>
       <!-- Slider de imágenes -->
       <div class="owl-carousel owl-theme js_fotos_carousel fotos-carousel">
-        <div class="item">
+        <div class="item ih-item effect13 from_left_and_right">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
+
+            <div class="info">
+		           <h3>Heading here</h3>
+		           <p>Description goes here</p>
+		        </div>
+
           </a>
         </div>
-        <div class="item">
+        <div class="item ih-item effect13 from_left_and_right">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
+            
+            <div class="info">
+		           <h3>Heading here</h3>
+		           <p>Description goes here</p>
+		        </div>
+
           </a>
         </div>
-        <div class="item">
+        <div class="item ih-item effect13 from_left_and_right">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
+            
+            <div class="info">
+		           <h3>Heading here</h3>
+		           <p>Description goes here</p>
+		        </div>
+
           </a>
         </div>
-        <div class="item">
+        <div class="item ih-item effect13 from_left_and_right">
           <a href="#">
             <img src="images/small_carousel/apple.jpg">
+            
+            <div class="info">
+		           <h3>Heading here</h3>
+		           <p>Description goes here</p>
+		        </div>
+		        
           </a>
         </div>
       </div>
     </div>
     <div class="col-lg-6 slider-videos">
-        <!-- Slider de videos -->
+			<h2 class="titulo">Videos</h2>
+      <!-- Slider de videos -->
       <ul class="js_videos_slider videos-slider">
         <li>
-          <iframe src="http://player.vimeo.com/video/17914974" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <iframe width="500" height="281" src="https://www.youtube.com/embed/Bl8fkc4HsSs" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </li>
         <li>
           <iframe src="http://player.vimeo.com/video/17914974" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

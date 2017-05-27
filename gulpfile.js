@@ -37,6 +37,21 @@ gulp.task('screen', function(){
   .pipe(gulp.dest('./app/css'))
   .pipe(notify("Ha finalizado la tarea screen"));
 });
+//Screen dev
+gulp.task('screen-dev', function(){
+  var processors = [
+  autoprefixer({browsers: ['last 2 versions'] })
+  ];
+  return gulp.src('./app/dev/sass/main.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(sourceMaps.init())
+  .pipe(postCss(processors))
+  .pipe(gcmq())
+  .pipe(rename('screen.dev.css'))
+  .pipe(sourceMaps.write('.'))
+  .pipe(gulp.dest('./app/css'))
+  .pipe(notify("Ha finalizado la tarea screen"));
+});
 
 //Comprimir archivo app.js
 gulp.task('js', function () {
@@ -49,6 +64,7 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['./app/dev/sass/**/*'], ['screen']);
+  gulp.watch(['./app/dev/sass/**/*'], ['screen-dev']);
   gulp.watch(['./app/dev/js/**/*'], ['js']);
 });
 
@@ -60,6 +76,7 @@ gulp.task(
     ['connect', 
     'watch', 
     'screen',
+    'screen-dev',
     'js'
     ]
   );
