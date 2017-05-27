@@ -98,7 +98,7 @@ var Lightbox = (function ($) {
 			var header = '<div class="modal-header"' + (this._config.title || this._config.alwaysShowClose ? '' : ' style="display:none"') + '>' + (this._isBootstrap3 ? btn + h4 : h4 + btn) + '</div>';
 			var footer = '<div class="modal-footer"' + (this._config.footer ? '' : ' style="display:none"') + '>' + (this._config.footer || "&nbsp;") + '</div>';
 			var body = '<div class="modal-body"><div class="ekko-lightbox-container"><div class="ekko-lightbox-item fade in show"></div><div class="ekko-lightbox-item fade"></div></div></div>';
-			var dialog = '<div class="modal-dialog" role="document"><div class="modal-content">' + header + body + footer + '</div></div>';
+			var dialog = '<div class="modal-dialog" role="document"><div class="modal-content animated">' + header + body + footer + '</div><span class="ekko-lightbox-close" title="Cerrar"><i class="fa fa-times"></i></span></div>';
 			$(this._config.doc.body).append('<div id="' + this._modalId + '" class="ekko-lightbox modal fade" tabindex="-1" tabindex="-1" role="dialog" aria-hidden="true">' + dialog + '</div>');
 
 			this._$modal = $('#' + this._modalId, this._config.doc);
@@ -123,11 +123,12 @@ var Lightbox = (function ($) {
 
 				// add the directional arrows to the modal
 				if (this._config.showArrows && this._$galleryItems.length > 1) {
-					this._$lightboxContainer.append('<div class="ekko-lightbox-nav-overlay"><a href="#">' + this._config.leftArrow + '</a><a href="#">' + this._config.rightArrow + '</a></div> <span class="ekko-lightbox-close" title="Cerrar"><i class="fa fa-times" aria-hidden="true"></i></span>');
+					this._$lightboxContainer.append('<div class="ekko-lightbox-nav-overlay"><a href="#">' + this._config.leftArrow + '</a><a href="#">' + this._config.rightArrow + '</a></div> ');
 					this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first();
 					this._$lightboxContainer.on('click', 'a:first-child', function (event) {
 						event.preventDefault();
 						return _this.navigateLeft();
+
 					});
 					this._$lightboxContainer.on('click', 'a:last-child', function (event) {
 						event.preventDefault();

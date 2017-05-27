@@ -363,18 +363,21 @@
               <a href="https://unsplash.it/1200/768.jpg?image=263" data-toggle="lightbox" data-gallery="hidden-images" class="zoom">
               <img src="https://unsplash.it/600.jpg?image=263" class="img-fluid">
               <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+              <p class="img-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolorem, aut. Ipsam nam rem doloribus.</p>
             </a>
             </div>
             <div class="item">
               <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="hidden-images" class="zoom">
                 <img src="https://unsplash.it/600.jpg?image=264" class="img-fluid">
                 <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                <p class="img-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, cupiditate!</p>
             </a>
             </div>
             <div class="item">
               <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox" data-gallery="hidden-images" class="zoom">
               <img src="https://unsplash.it/600.jpg?image=265" class="img-fluid">
               <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+              <p class="img-description">Lorem ipsum dolor sit.</p>
             </a>
           </div>
         
@@ -552,6 +555,7 @@
     </div>
   </div>
 </footer>
+
 <!-- Botón Subir -> top -->
 <a href="#" id="js_up" class="up" style="display: none">
   <div class="box-up d-flex justify-content-center align-items-center">
@@ -572,10 +576,30 @@
 <script src="js/app.min.js"></script>
 <script>
   $(document).ready(function() {
+
+    function descriptionImg(time){
+      var description_img = $('.img-description').html();
+      setTimeout(function(){ 
+        $('.ekko-lightbox-item.show').append( '<p class="img-description lead">'+ description_img +'</p>');
+      }, time);
+    }
+
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       event.preventDefault();
       $(this).ekkoLightbox();
+
+       descriptionImg(1000);
     });
+
+    $(document).on('click', '.ekko-lightbox-nav-overlay a:first-child', function(event) {
+      event.preventDefault();
+      descriptionImg(100);      
+    });
+    $(document).on('click', '.ekko-lightbox-nav-overlay a:last-child', function(event) {
+      event.preventDefault();
+      descriptionImg(100);      
+    });
+
   });
 </script>
 </body>

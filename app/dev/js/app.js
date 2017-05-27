@@ -172,7 +172,7 @@ var $drea_js = (function ($) {
         $("#js_up").slideUp(300);
       }
     });
-    $("#js_up i").on('click', function (e) {
+    $("#js_up").on('click', function (e) {
       e.preventDefault();
         $("body,html").animate({
         scrollTop: 0
@@ -183,6 +183,19 @@ var $drea_js = (function ($) {
   //===  WOW ANIMATION ====
   animate_wow = function(){
     new WOW().init();
+  },
+  //SLIDE PAGINA INTERNA
+  galeria_lightbox = function(){
+    $(document).on('click', '.ekko-lightbox-close', function(event) {
+      event.preventDefault();
+      $(this).css('display', 'none');
+      $('body').removeAttr('style').removeClass('modal-open');
+      $('.modal-content').addClass('slideOutUp');
+      setTimeout(function(){ 
+        $('.modal-backdrop.fade.show, .ekko-lightbox.modal').remove();
+      }, 500);
+    }); 
+
   },
   init = function () {
     buscador();
@@ -195,6 +208,7 @@ var $drea_js = (function ($) {
     redes_sociales();
     botonUp();
     animate_wow();
+    galeria_lightbox();
   };
 
   return {
