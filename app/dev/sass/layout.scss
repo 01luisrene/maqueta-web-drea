@@ -440,12 +440,18 @@
 .galeria-lightbox{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin-bottom: 2em;
 	.item{
 		margin-bottom: 10px;
 		overflow: hidden;
 		width: 33%;
+		@media (max-width: 767px) {
+			width: 49%;
+		}
+		@media (max-width: 575px) {
+			width: 48%;
+		}
 	}
  .zoom{
  	display: block;
@@ -492,7 +498,6 @@
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
     }
    }
-   .img-description{display: none;}
 }
 }
 
@@ -529,17 +534,19 @@
 	}
 }
 
-.img-description{
- 	&.lead{
+.ekko-lightbox .modal-footer{
+		justify-content: flex-start;
  		background: rgba(0,0,0,.5);
+ 		border-top: 0;
  		color: #fff;
+ 		margin-left: 15px;
+ 		margin-right: 15px;
  		padding: 10px;
  		margin-bottom: 0;
  		position: absolute;
  		left: 0;
  		right: 0;
- 		bottom: 0;
- 	}
+ 		bottom: 15px;
  }
 
 

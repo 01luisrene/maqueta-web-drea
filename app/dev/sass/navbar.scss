@@ -139,18 +139,18 @@ body{
   &.nav-opened{
     .site-container {
       overflow-x: hidden;
-      -webkit-transform: translate3D(-320px, 0, 0);
-      -ms-transform: translate3D(-320px, 0, 0);
-      transform: translate3D(-320px, 0, 0);
+      -webkit-transform: translate3D(-350px, 0, 0);
+      -ms-transform: translate3D(-350px, 0, 0);
+      transform: translate3D(-350px, 0, 0);
       -webkit-transition: -webkit-transform 0.3s ease;
       transition: transform 0.3s ease;
+      z-index: -1;
     }
     .nav-mobile {
       opacity: 1;
-      -webkit-transition: -webkit-transform 0.3s ease,
-      opacity 0s ease 0s;
-      transition: transform 0.3s ease,
-      opacity 0s ease 0s;
+      -webkit-transition: -webkit-transform 0.3s ease, opacity 0s ease 0s;
+      transition: transform 0.3s ease, opacity 0s ease 0s;
+
       -webkit-transform: translate3D(0, 0, 0);
       -ms-transform: translate3D(0, 0, 0);
       transform: translate3D(0, 0, 0);
@@ -171,13 +171,13 @@ body{
         transform: translate3D(0, 0, 0);
         -webkit-transition: -webkit-transform 0.3s ease;
         transition: transform 0.3s ease;
+        z-index: 100;
       }
       .nav-mobile{
         opacity: 1;
-        -webkit-transition: -webkit-transform 0.3s ease,
-        opacity 0s ease 0s;
-        transition: transform 0.3s ease,
-        opacity 0s ease 0s;
+        -webkit-transition: -webkit-transform 0.3s ease, opacity 0s ease 0s;
+        transition: transform 0.3s ease, opacity 0s ease 0s;
+
         -webkit-transform: translate3D(0, 0, 0);
         -ms-transform: translate3D(0, 0, 0);
         transform: translate3D(0, 0, 0);
@@ -187,17 +187,18 @@ body{
       }
     }
   }
-  .nav-closed{
+  &.nav-closed{
     .nav-mobile{
-      -webkit-transform: translate3D(320px, 0, 0);
-      -ms-transform: translate3D(320px, 0, 0);
-      transform: translate3D(320px, 0, 0);
+      -webkit-transform: translate3D(250px, 0, 0);
+      -ms-transform: translate3D(250px, 0, 0);
+      transform: translate3D(250px, 0, 0);
     }
   }
 }
 
 .nav-mobile {
   background-color: $menu-bg;
+  border-top: 10px solid $menu-border-bottom-color;
   position: fixed;
   top: 0;
   right: 0;
@@ -207,17 +208,17 @@ body{
   opacity: 0;
   margin-bottom: 0;
   text-align: left;
-  -webkit-transition: -webkit-transform 0.5s ease,
-  opacity 0.3s ease 0.7s;
-  transition: transform 0.5s ease,
-  opacity 0.3s ease 0.7s;
+  z-index: 1;
+  transition: transform 0.5s ease, opacity 0.3s ease 0.7s;
+  @media (min-height: 230px) {
+     overflow-y: scroll;
+  }
   .logo-drea{
     display: block;
     max-width: 230px;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 35px;
   }
   .nav-main{
     border-top: 2px solid $menu-border-bottom-color;
@@ -334,18 +335,25 @@ body{
 }
 //Icono cerrar
 .nav-cerrar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: $menu-border-bottom-color;
   border: thin solid $menu-bg;
-  border-radius: 3px;
-  box-shadow:         3px 3px 0px 0px rgba(50, 50, 50, 1);
+  border-radius: 50%;
+  border: 2px solid #3B3636;
+  box-shadow:    3px 0px 0px 0px rgba(50, 50, 50, 1);
   color: #fff;
   font-size: 25px;
   padding: 5px 15px;
+  height: 45px;
+  width: 45px;
   position: absolute;
-  left: -20px;
-  top: 15px;
-  z-index: $menu-z-index + 2;
+  right: 10px;
+  top: 5px;
+  z-index: $menu-z-index  * 100;
   &:hover{
     color: #fff;
+    text-decoration: none;
   }
 }
