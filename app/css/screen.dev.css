@@ -896,6 +896,28 @@ body.nav-closed .nav-mobile {
   margin-bottom: 2em;
 }
 
+.galeria-lightbox.result_slider {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.galeria-lightbox.result_slider .item {
+  white-space: nowrap;
+  width: 100%;
+}
+
+.galeria-lightbox.result_slider .item .slide {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 20%;
+}
+
 .galeria-lightbox .item {
   margin-bottom: 10px;
   overflow: hidden;

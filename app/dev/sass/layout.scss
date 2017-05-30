@@ -442,6 +442,26 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-bottom: 2em;
+	//Estilos para el slider página interna 2
+	&.result_slider{
+		width: 100%;
+	  position: relative;
+	  margin: 0 auto;
+	  overflow: hidden;
+	  margin-bottom: 2em;
+	  .item{
+	  	white-space: nowrap;
+	  	width: 100%;
+	  	.slide{
+	  		display: inline-block;
+			  margin-right: -4px;
+			  vertical-align: top;
+			  background-size: 100%;
+			  background-repeat: no-repeat;
+			  background-position: 20%;
+	  	}
+	  }
+	}
 	.item{
 		margin-bottom: 10px;
 		overflow: hidden;

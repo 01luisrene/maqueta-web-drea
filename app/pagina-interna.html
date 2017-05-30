@@ -133,8 +133,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center" href="contacto.html">
-              Contacto
+            <a class="nav-link d-flex align-items-center" href="pagina-interna2.html">
+              Pagina interna 2
             </a>
           </li>
       </ul>
@@ -266,8 +266,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center" href="pagina-interna.html">
-              Página interna
+            <a class="nav-link d-flex align-items-center" href="pagina-interna2.html">
+              Página interna 2
             </a>
           </li>
       </ul>
@@ -304,7 +304,7 @@
           <h2 class="sp-layer sp-padding sp-black" data-position="bottomCenter" data-width="100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aut.</h2>
         </a>
       </div>
-  </div>
+    </div>
   </div>
 </section>
 
@@ -360,19 +360,19 @@
         <!--Galería de fotos -->
         <div class="galeria-lightbox">
             <div class="item">
-              <a href="https://unsplash.it/1200/768.jpg?image=263" data-toggle="lightbox" data-gallery="hidden-images" data-footer="Lorem 1" class="zoom">
+              <a href="https://unsplash.it/1200/768.jpg?image=263" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 1" class="zoom">
               <img src="https://unsplash.it/600.jpg?image=263" class="img-fluid">
               <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
             </a>
             </div>
             <div class="item">
-              <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="hidden-images" data-footer="Lorem 2" class="zoom">
+              <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 2" class="zoom">
                 <img src="https://unsplash.it/600.jpg?image=264" class="img-fluid">
                 <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
             </a>
             </div>
             <div class="item">
-              <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox" data-gallery="hidden-images" data-footer="Lorem 3" class="zoom">
+              <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 3" class="zoom">
               <img src="https://unsplash.it/600.jpg?image=265" class="img-fluid">
               <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
             </a>
@@ -573,13 +573,6 @@
 <script src="js/app.min.js"></script>
 <script>
   $(document).ready(function() {
-
-    function descriptionImg(time){
-      var description_img = $('.img-description').html();
-      setTimeout(function(){ 
-        $('.ekko-lightbox-item.show').append( '<p class="img-description lead">'+ description_img +'</p>');
-      }, time);
-    }
 
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       event.preventDefault();

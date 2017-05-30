@@ -158,6 +158,33 @@ var $drea_js = (function ($) {
       }
     });
   },
+  lista_sliders_carousel = function(){
+    $(".js_lista_sliders").owlCarousel({
+      loop:true,
+      margin:10,
+      autoplay: true,
+      smartSpeed: 800,
+      autoplayHoverPause:true,
+      dots: false,
+      navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>' , '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+      nav: true,
+      items: 4,
+      responsive:{
+        0:{
+          items:2,
+          nav:true
+        },
+        600:{
+            items:3,
+            nav:true
+        },
+        1000:{
+            items:4,
+            nav:true
+        }
+      }
+    });
+  },
   redes_sociales = function(){
     var altura_redes_sociales = $('.js_box_redes_sociales').height();
     $('.js_box_redes_sociales').css({
@@ -197,6 +224,13 @@ var $drea_js = (function ($) {
     }); 
 
   },
+  load_slider = function(){
+      $('.js_lista_sliders a').on('click', function(event) {
+        event.preventDefault();
+        var slider = $(this).data('slider-num');
+        alert('slider número ' + slider);
+      });
+  },
   init = function () {
     buscador();
     menu_mobile();
@@ -205,10 +239,12 @@ var $drea_js = (function ($) {
     videos_carousel();
     lideres_carousel();
     enlaces_interes_carousel();
+    lista_sliders_carousel();
     redes_sociales();
     botonUp();
     animate_wow();
     galeria_lightbox();
+    load_slider();
   };
 
   return {
