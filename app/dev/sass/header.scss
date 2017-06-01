@@ -68,6 +68,7 @@
 //Contenedor de buscador
 .box-buscador{
 	padding-bottom: 0.5em;
+	position: relative;
 	@media (max-width: 991px) {
 		order: 3;
 		padding-top: 0.5em;
@@ -88,5 +89,16 @@
 		.form-control{
 			padding-right: 25px;
 		}
+	}
+	.box-resultados{
+		background: #fefefe;
+		display: none;
+		height: 250px;
+		overflow-y: scroll;
+		position: absolute;
+		top: 30px;
+		left: 0;
+		width: 100%;
+		z-index: 99999;
 	}
 }

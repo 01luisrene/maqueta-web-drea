@@ -12,6 +12,7 @@ h5,
 h6 {
   color: #18814B;
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 1em;
 }
 
 img {
@@ -475,6 +476,7 @@ body.nav-closed .nav-mobile {
 
 .box-buscador {
   padding-bottom: 0.5em;
+  position: relative;
 }
 
 .box-buscador .buscador-form {
@@ -493,6 +495,18 @@ body.nav-closed .nav-mobile {
   padding-right: 25px;
 }
 
+.box-buscador .box-resultados {
+  background: #fefefe;
+  display: none;
+  height: 250px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
 .site-container {
   position: relative;
   z-index: 10;
@@ -503,7 +517,6 @@ body.nav-closed .nav-mobile {
 .titulo {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 1em;
   position: relative;
   width: 100%;
 }
@@ -835,8 +848,42 @@ body.nav-closed .nav-mobile {
   background-size: cover;
   background-position: center center;
   margin-bottom: 2em;
+  position: relative;
   height: 350px;
   width: 100%;
+  z-index: 100;
+}
+
+.cover-overlay {
+  opacity: .7;
+  background: transparent url("../images/overlays/03.png") center center repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+}
+
+.titulo-principal {
+  color: #fefefe;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 0px black;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: -60px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 50%;
+  width: 96%;
+  z-index: 1000;
 }
 
 .contenido__articulo img {
@@ -886,6 +933,18 @@ body.nav-closed .nav-mobile {
   color: #111;
 }
 
+.lista-slides span.nombre-slide {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fefefe;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+}
+
 .galeria-lightbox {
   display: -ms-flexbox;
   display: flex;
@@ -894,28 +953,6 @@ body.nav-closed .nav-mobile {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   margin-bottom: 2em;
-}
-
-.galeria-lightbox.result_slider {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  margin-bottom: 2em;
-}
-
-.galeria-lightbox.result_slider .item {
-  white-space: nowrap;
-  width: 100%;
-}
-
-.galeria-lightbox.result_slider .item .slide {
-  display: inline-block;
-  margin-right: -4px;
-  vertical-align: top;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 20%;
 }
 
 .galeria-lightbox .item {
@@ -1301,6 +1338,12 @@ a.up i {
     display: block;
     height: 150px !important;
     width: 150px !important;
+  }
+
+  .titulo-principal {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 99%;
   }
 
   .galeria-lightbox .item {

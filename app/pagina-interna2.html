@@ -191,6 +191,18 @@
         <i class="fa fa-search js_icono_buscador" aria-hidden="true"></i>
         <input type="text" class="form-control input-sm js_caja_buscador" placeholder="Busca noticias, trámites, servicios...">
       </form>
+      <div class="row">
+        <div class="box-resultados js_box_resultados animated fadeIn col-lg-12">
+          <p>Resultados de la busqueda</p>
+          <ul class="list-unstyled">
+            <li><a href="">Resultado 1</a></li>
+            <li><a href="">lorem 2</a></li>
+            <li><a href="">Resultado 2</a></li>
+            <li><a href="">Resultado 4</a></li>
+            <li><a href="">Resultado 5</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
         <!-- Menú web --> 
@@ -198,7 +210,7 @@
       <img class="hidden-lg-up logo-drea" src="images/logo_drea_white.svg">
       <ul class="nav-main hidden-md-down list-unstyled d-flex">
           <li class="nav-item active">
-            <a class="nav-link d-flex align-items-center" href="#">
+            <a class="nav-link d-flex align-items-center" href="/">
               Inicio
             </a>
           </li>
@@ -312,12 +324,13 @@
 <main class="container">
   <div class="row">
     <div class="col-xl-12">
-      <div class="cover" style="background-image: url(images/covers/cover_vienna.jpg)"></div>
+      <div class="cover" style="background-image: url(images/slides/megamind_07.jpg)">
+        <h1 class="titulo-principal">Lista de Slider</h1>
+        <div class="cover-overlay"></div>
+      </div>
     </div>
-    <article class="contenido__articulo col-xl-8">
+    <article class="contenido__articulo col-xl-12">
       <header>
-        <h1>Lista de Slider.</h1>
-        <hr/>
         <ul class="lista-compartir-redes list-unstyled d-flex justify-content-center">
           <li>
             <a class="d-flex justify-content-center align-items-center facebook" href="https://www.facebook.com/sharer/sharer.php?url=colocar la url aqui"
@@ -341,56 +354,80 @@
       </header>
       <section>
 
-      <div class="js_lista_sliders owl-carousel owl-theme">
+      <div class="js_lista_slides lista-slides owl-carousel owl-theme">
         <div>
           <a href="#" target="_blank" data-slider-num="1">
             <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+            <span class="nombre-slide">Lorem ipsum dolor sit amet.</span>
           </a>
         </div>
         <div>
           <a href="#" target="_blank" data-slider-num="2">
             <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+            <span class="nombre-slide">Lorem ipsum dolor sit..</span>
           </a>
         </div>
         <div>
           <a href="#" target="_blank" data-slider-num="3">
             <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+            <span class="nombre-slide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, eos!.</span>
           </a>
         </div>
         <div>
           <a href="#" target="_blank" data-slider-num="4">
             <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+            <span class="nombre-slide">Lorem ipsum dolor sit amet, consectetur.</span>
           </a>
         </div>
         <div>
           <a href="#" target="_blank" data-slider-num="5">
             <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+            <span class="nombre-slide">Lorem ipsum dolor sit amet.</span>
           </a>
         </div>
       </div>
       <hr>
       <h2>Nombre del slider seleccionado</h2>
+
+      <div class="galeria-lightbox">
+            <div class="item">
+              <a href="https://unsplash.it/1200/768.jpg?image=263" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 1" class="zoom">
+                <img src="https://unsplash.it/600.jpg?image=263" class="img-fluid">
+                <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+            </a>
+            </div>
+            <div class="item">
+              <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 2" class="zoom">
+                <img src="https://unsplash.it/600.jpg?image=264" class="img-fluid">
+                <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+            </a>
+            </div>
+            <div class="item">
+              <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 3" class="zoom">
+                 <img src="https://unsplash.it/600.jpg?image=265" class="img-fluid">
+                 <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 2" class="zoom">
+                <img src="https://unsplash.it/600.jpg?image=264" class="img-fluid">
+                <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+            </a>
+            </div>
+            <div class="item">
+              <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 1" class="zoom">
+                <img src="https://unsplash.it/600.jpg?image=265" class="img-fluid">
+                <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+            </a>
+            </div>
+            <div class="item">
+              <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 1" class="zoom">
+                <img src="https://unsplash.it/600.jpg?image=264" class="img-fluid">
+                <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
+            </a>
+            </div>
         
-      <div class="galeria-lightbox result_slider">
-        <div class="item">
-
-          <a href="images/slides/megamind1048.jpg" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 1" class="zoom slide">
-              <img src="images/slides/megamind1048.jpg" class="img-fluid">
-              <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
-          </a>
-
-          <a href="images/slides/ratatouille2.jpg" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 2" class="zoom slide">
-              <img src="images/slides/ratatouille2.jpg" class="img-fluid">
-              <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
-          </a>
-    
-          <a href="images/slides/megamind_07.jpg" data-toggle="lightbox" data-gallery="lista de images" data-footer="Lorem 3" class="zoom slide">
-            <img src="images/slides/megamind_07.jpg" class="img-fluid">
-            <span class="overlay"><i class="fa fa-expand" aria-hidden="true"></i></span>
-          </a>
-
         </div>
-      </div>
 
       </section>
       <footer>
@@ -458,17 +495,6 @@
         </section>
       </div>
     </article>
-    <aside class="col-xl-4 hidden-lg-down">
-      <div class="list-group">
-        <a href="#" class="list-group-item active">
-          Cras justo odio
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
-      </div>
-    </aside>
   </div>
 </main>
 <!-- Sección: redes sociales-->
