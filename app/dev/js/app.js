@@ -240,6 +240,40 @@ var $drea_js = (function ($) {
         alert('slider número ' + slider);
       });
   },
+  chat_drea = function(){
+    $('.js_maximizar').on('click', function(event) {
+      event.preventDefault();
+      $('.body.chat').removeClass('slideOutDown').addClass('slideInUp');
+      setTimeout(function(){
+        $('.body.chat').css('display', 'block');
+        $('.js_chat_drea').removeClass('minimizado');
+        $('.js_minimizar').css('display', 'block');
+        $('.js_maximizar').css('display', 'none');
+      }, 300);
+    });
+
+    $('.js_minimizar').on('click', function(event) {
+      event.preventDefault();
+      $('.body.chat').removeClass('slideInUp').addClass('slideOutDown');
+      setTimeout(function(){
+        $('.body.chat').css('display', 'none');
+        $('.js_chat_drea').addClass('minimizado');
+        $('.js_maximizar').css('display', 'block');
+        $('.js_minimizar').css('display', 'none');
+      }, 300);
+    });
+
+    $('.js_show_chat').on('click',function(event) {
+      event.preventDefault();
+        $('.body.chat').removeClass('slideOutDown').addClass('slideInUp');
+        setTimeout(function(){
+          $('.body.chat').css('display', 'block');
+          $('.js_chat_drea').removeClass('minimizado');
+          $('.js_minimizar').css('display', 'block');
+          $('.js_maximizar').css('display', 'none');
+        }, 300);
+    });
+  },
   init = function () {
     buscador();
     menu_mobile();
@@ -254,6 +288,7 @@ var $drea_js = (function ($) {
     animate_wow();
     galeria_lightbox();
     load_slider();
+    chat_drea();
   };
 
   return {

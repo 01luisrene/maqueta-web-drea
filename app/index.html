@@ -60,7 +60,7 @@
     <a class="nav-cerrar" href="#">
       <i class="fa fa-times" aria-hidden="true"></i>
     </a>
-    <img class="hidden-lg-up logo-drea" src="images/logo_drea_white.svg">
+    <img class="hidden-lg-up logo-drea" src="images/logo_drea_white.svg" width="">
     <!-- Recuerda que esta lista ul debe ser la misma tanto para mobile & desktop puedes usar una sola platilla y solo incluirla en ambos contenedores tag -->
     <ul class="nav-main hidden-md-down list-unstyled d-flex">
           <li class="nav-item active">
@@ -715,6 +715,54 @@
     </li>
   </ul>
 </section>
+<!-- POP-PUP -->
+<section class="container box-pop-pup-drea">
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <a href="https://01luisrene.com" target="_blank">
+              <img class="d-block img-fluid" src="https://unsplash.it/1200/768.jpg?image=265" alt="First slide">
+            </a>
+          </div>
+          <div class="carousel-item">
+           <a href="https://google.com" target="_blank">
+              <img class="d-block img-fluid" src="https://unsplash.it/1200/768.jpg?image=265" alt="Second slide">
+           </a>
+          </div>
+          <div class="carousel-item">
+            <a href="http://drea.gob.pe" target="_blank">
+              <img class="d-block img-fluid" src="https://unsplash.it/1200/768.jpg?image=265" alt="Third slide">
+            </a>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
 <!-- FOOTER -->
 <footer class="box-footer container">
   <div class="row footer">
@@ -805,5 +853,8 @@
 <script src="plugins-js/jquery.bxslider.min.js"></script>
 <script src="plugins-js/wow.min.js"></script>
 <script src="js/app.min.js"></script>
+<script>
+  $('#myModal').appendTo("body").modal('show');
+</script>
 </body>
 </html>
