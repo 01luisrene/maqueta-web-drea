@@ -1119,6 +1119,7 @@ body.nav-closed .nav-mobile {
 
 .box-icon-contacto:hover .iconos {
   box-shadow: 0 0 0 5px #1b75bc;
+  color: #1b75bc;
 }
 
 .box-icon-contacto:hover .iconos::after {
