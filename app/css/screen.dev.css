@@ -844,6 +844,8 @@ body.nav-closed .nav-mobile {
   color: #3A3737;
 }
 
+/*=================PUP PUP==========================*/
+
 .box-pop-pup-drea .btn {
   display: none;
 }
@@ -854,6 +856,11 @@ body.nav-closed .nav-mobile {
 
 .modal-open .modal .modal-body img {
   height: 400px;
+}
+
+.modal-open .modal .carousel-item a {
+  display: block;
+  margin: 0 auto;
 }
 
 .cover {

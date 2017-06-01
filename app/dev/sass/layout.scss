@@ -384,7 +384,7 @@
 	}
 }
 
-//=================PUP PUP==========================//
+/*=================PUP PUP==========================*/
 .box-pop-pup-drea{
 	.btn{
 		display: none;
@@ -396,6 +396,12 @@
 			padding: 0;
 			img{
 				height: 400px;
+			}
+		}
+		.carousel-item{
+			a{
+				display: block;
+				margin: 0 auto;
 			}
 		}
 	}
