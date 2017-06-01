@@ -844,6 +844,10 @@ body.nav-closed .nav-mobile {
   color: #3A3737;
 }
 
+.box-pop-pup-drea .btn {
+  display: none;
+}
+
 .modal-open .modal .modal-body {
   padding: 0;
 }
